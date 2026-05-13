@@ -17,7 +17,15 @@ Power is power. Qi, kinetic force, spirit resonance, faith — all of it is meas
 - **1 megashén (MS)** = 1,000,000 shén — Tier 4 threshold
 - **1 gigashén (GS)** = 1,000,000,000 shén — Tier 7 threshold
 
-The word means "spirit/divine/god" in the old tongue. Cultivators speak of "shén capacity" the way mortals speak of strength. An NPC might say: *"I sensed his shén from three li away — at least 50 kiloshén. Tier 3, maybe 4."*
+The word means "spirit/divine/god" in the old tongue. Cultivators speak of "shén" the way mortals speak of strength — but in practice, most people don't measure it. They compare.
+
+Since Qi cultivation is the most widespread path, its realm names have become the common tongue for power. An NPC evaluating a stranger won't say "Tier 4" — they'll say:
+
+> *"I felt his presence before I saw him. Core Formation at least — maybe early Nascent Soul. The air went still when he passed."*
+
+They're describing a feeling, not a number. The realm name is shorthand everyone understands, even if the cultivator in question is a Body cultivator at Diamond Meridians or a Spirit cultivator at Spirit Realm Entry — both are "roughly Core Formation level" in common parlance.
+
+The shén number and tier are **for the player's UI only**. The world speaks in realm names and gut feelings.
 
 | Power Tier | Shén Required | Qi Path Realm | Body Path Stage | Spirit Path Stage | Tech Path Stage | Faith Path Stage | Beast Path Stage |
 |-------------|----------------|---------------|-----------------|-------------------|-----------------|-----------------|-----------------|
@@ -285,14 +293,15 @@ The player identifies as "Jade Body stage" (their path). The tier number lets th
 
 | Context | What's Used |
 |---------|------------|
-| NPC dialogue | Realm names ("I see you've reached Jade Body, impressive.") |
-| Sect rankings | Realm names + path titles |
+| NPC dialogue | Qi realm names as common tongue ("Core Formation level"), gut feelings, presence |
+| Sect rankings | Realm names + path titles ("Jade Body stage") |
 | Combat balance | Power tier (Tier 4 vs Tier 3 = decisive advantage) |
-| Location gating | Power tier ("Danger 5 — requires Tier 5+") |
+| Location gating | Danger described in terms of required power ("Only those at Core Formation or above survive the Gorge") |
 | Event triggers | Power tier ("This event fires at Tier 3+") |
-| Cross-path comparison | Power tier ("You are roughly equal to a Core Formation cultivator") |
+| Cross-path comparison | Qi realm names as universal reference ("You are roughly Core Formation level") |
+| Player UI | Shén bar with tier number and path-specific realm name |
 
-The tier is the **game mechanic**. The realm name is the **story**.
+The shén number and tier are the **game mechanic**. Realm names are the **common language of the world**.
 
 ---
 

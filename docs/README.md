@@ -154,6 +154,7 @@ Each subsystem has a detailed specification document:
 | [Architecture](./architecture.md) | Deep dive: event flow, state management, ECS pattern |
 | [Data Models](./data-models.md) | All TypeScript interfaces and types |
 | [World Building](./world-building.md) | **Lore, history, Nine Provinces, sects, origins, politics** |
+| [World Factions](./world-factions.md) | **Six first-rate sects (one per path), second/third-rate sects, guilds, pacts, legendary loners** |
 | [Cultivation System](./systems/cultivation.md) | Qi accumulation, breakthrough, tribulation, bottlenecks |
 | [Cultivation Paths](./systems/cultivation-paths.md) | **The Six Paths**: Body, Qi, Spirit, Tech, Faith, Beast — choose at Foundation Establishment |
 | [Element System](./systems/elements.md) | Five Phases, elemental affinity, qi types, interactions, tribulations |

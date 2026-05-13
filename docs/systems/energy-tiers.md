@@ -132,13 +132,18 @@ Sub-stage transitions are **automatic events** — they fire when the shén thre
 
 ---
 
-## Shén Generation — Everything Produces Items, Not Direct Shén
+## Shén Generation — Internal Flow vs External Items
 
-**Nothing in the game grants shén directly.** Every activity produces **items** that the player can use, consume, refine, or trade to get shén. Shén is a resource you **extract from things** — not one you simply gain.
+### Two Ways Shén Enters Your Dantian
 
-This makes the economy tangible. You hold shén in your inventory. You decide when to absorb it. You can hoard, trade, or refine for better yield.
+| Method | How It Works | Examples |
+|--------|-------------|----------|
+| **Internal Flow** 🧘 | Shén circulates directly into your dantian. No item. No extraction. You draw from the ambient world through your own practice. | Meditation, body channeling, direct qi circulation |
+| **External Extraction** 💎 | The world produces shén-containing items. You must **absorb** them — a deliberate action — to add their shén to your bar. | Beast cores, soul pearls, faith tokens, pills, crafted crystals |
 
-### Three Item Families
+**Meditation is the only Internal Flow source available to every path.** Other paths unlock their own internal methods (body cultivators channel ki, spirit cultivators draw soul energy directly) — but meditation is the universal baseline. Everything else is an item you must decide to use.
+
+### Three Item Families (External Extraction)
 
 | Family | Examples | How They Relate |
 |--------|----------|-----------------|
@@ -171,7 +176,7 @@ You learn to **extract** shén from the world manually.
 
 | Activity | What You Get | How to Get Shén From It |
 |----------|-------------|------------------------|
-| **Ambient Qi Absorption** | Qi Crystal (crude) — 1 per hour of meditation. Contains 0.5 S. | Absorb the crystal. Or save 10 and refine them into a better crystal. |
+| **Meditation** | Shén flows directly into your dantian — 0.5 S per hour. No item. Internal circulation bypasses extraction. | Direct shén to your bar. This is the only way to fill your dantian without consuming an item. |
 | **Combat Victory** | Beast Core (low-grade) — tier × 0.2 S. | Absorb for immediate shén. Or sell to merchant for 5 stones. |
 | **Herb Gathering** | Spirit Herbs — can be eaten raw (0.1 S) or used in crafting. | Eat raw: low yield. Refine: better yield (Tier 2+). |
 | **Merchant Trade** | Spend spirit stones to buy Shén Vessels. | 10 stones = 1 Qi Crystal (0.5 S). Stone absorption is inefficient. |
@@ -187,7 +192,7 @@ Path choice now matters. Each path produces different items. You can also **craf
 
 | Activity | What You Get | How to Get Shén From It |
 |----------|-------------|------------------------|
-| **Qi Path: Sun/Moon Meditation** | Sun Essence (+1 S, fire-aligned) or Moon Essence (+1 S, water-aligned) per session. | Absorb directly. Or trade to alchemists. |
+| **Qi Path: Sun/Moon Meditation** | Shén flows directly — Sun Essence during day (+1 S, fire-aligned), Moon Essence at night (+1 S, water-aligned). Internal circulation, no item. | Direct dantian. The time-of-day alignment affects breakthrough choices later. |
 | **Body Path: Physical Training** | Kinetic Residue (0.5 S per training session). Your body sheds power like skin cells. Collect and absorb. | Absorb the residue. |
 | **Spirit Path: Bind a Spirit** | Spirit generates a Soul Pearl every 100 ticks. 0.5 S each. | Absorb. Or let the spirit hold it for emergency use. |
 | **Tech Path: Basic Crafting** | Craft Shén Vessels from raw materials. 1 raw herb → 1 Qi Crystal (0.5 S) in 50 ticks. | Craft, then absorb or sell. |
@@ -287,11 +292,10 @@ You are preparing for the final step. Your existence alone creates phenomena.
 | Item | Shén Per Unit | Tier Available | Source |
 |------|--------------|----------------|--------|
 | Spirit Stone | 0.01 S | 0 | Currency, found everywhere |
-| Qi Crystal (crude) | 0.5 S | 1 | Ambient meditation |
+| Qi Crystal (crude) | 0.5 S | 1 | Formations, crafting |
 | Beast Core (low) | 0.2 S | 1 | Weak beasts |
-| Kinetic Residue | 0.5 S | 2 | Body training |
+| Kinetic Residue | 0.5 S | 2 | Body training (shed byproduct) |
 | Soul Pearl | 0.5 S | 2 | Bound spirits |
-| Sun Essence | 1 S | 2 | Qi Path — daytime meditation |
 | Refined Beast Core | 1 S | 3 | Alchemy (5× yield over raw) |
 | Faith Token | 1 S | 3 | Shrines |
 | Greater Soul Pearl | 5 S | 3 | Spirit Realm |

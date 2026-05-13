@@ -111,15 +111,16 @@ If the player has the shén but NOT the Dao comprehension, the breakthrough even
 
 ## Tier Sub-Stages
 
-Each tier has 3 sub-stages, matching the shén progress:
+Each tier has 4 sub-stages, matching the shén progress:
 
 | Sub-Stage | Progress Through Tier | Effect |
 |-----------|----------------------|--------|
-| **Early** | 0–33% | New tier abilities unlocked. Stats increase. |
-| **Mid** | 33–66% | Abilities strengthen. New techniques available. |
-| **Late** | 66–100% | At peak. Breakthrough to next tier available at 100%. |
+| **Early** | 1–33% | New tier abilities unlocked. Stats increase. |
+| **Mid** | 34–66% | Abilities strengthen. New techniques available. |
+| **Late** | 67–99% | At peak. One step from breakthrough. |
+| **Peak** | 100% | Breakthrough to next tier available. |
 
-Sub-stage transitions are **automatic events** — they fire when the shén threshold is crossed. Full-tier breakthroughs (Tier 3→4) are **choice-based events** with narrative consequences.
+Sub-stage transitions are **automatic events** — they fire when the shén threshold is crossed. Full-tier breakthroughs are **choice-based events** — and at higher tiers, gated by Dao comprehension.
 
 ---
 
@@ -302,7 +303,7 @@ function getTotalShen(player: PlayerState): number;
 function getPowerTier(totalShen: number): number;
 function getTierProgress(totalShen: number): number;         // 0–1
 function getTierThreshold(tier: number): number;              // Shén
-function getSubStage(totalShen: number, tier: number): 'early' | 'mid' | 'late';
+function getSubStage(totalShen: number, tier: number): 'early' | 'mid' | 'late' | 'peak';
 function getShenBreakdown(player: PlayerState): ShenBreakdown;
 
 function getRealmName(path: CultivationPath, tier: number, subStage: string): string;

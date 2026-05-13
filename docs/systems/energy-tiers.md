@@ -93,6 +93,22 @@ A secondary path contributes shén at 50% efficiency. A Spirit+Body cultivator's
 
 ---
 
+## Tier Breakthrough Requirements
+
+Energy is not enough. At higher tiers, the player must also comprehend the Dao.
+
+| Tier | Shén Required | Dao Requirement |
+|------|--------------|-----------------|
+| **0 → 1** | 10 S | None |
+| **1 → 2** | 1 kS | None |
+| **2 → 3** | 100 kS | One Dao at Glimpsed (1) |
+| **3 → 4** | 10 MS | Primary Dao at Understood (2) |
+| **4 → 5** | 1 GS | Primary Dao at Internalized (3) + one other Dao at Glimpsed (1) |
+| **5 → 6** | 100 GS | Primary Dao at Embodied (4) + second Dao at Understood (2) + third Dao at Glimpsed (1) |
+| **6 → 7** | 10 TS | Primary Dao at Transcended (5) + second Dao at Internalized (3) + third Dao at Understood (2) |
+
+If the player has the shén but NOT the Dao comprehension, the breakthrough event fires as a **blocked** state — the energy is there but directionless. See [Dao Comprehension](./dao-comprehension.md) for the full puzzle/trial system.
+
 ## Tier Sub-Stages
 
 Each tier has 3 sub-stages, matching the shén progress:

@@ -132,136 +132,215 @@ Sub-stage transitions are **automatic events** — they fire when the shén thre
 
 ---
 
-## Shén Generation — Unlocking New Sources Per Tier
+## Shén Generation — Everything Produces Items, Not Direct Shén
 
-At Tier 0, the player has almost nothing. Each tier **opens new ways to gather shén** — not just "earn more of the same," but entirely new mechanics. The walls are high, but the tools to climb them multiply.
+**Nothing in the game grants shén directly.** Every activity produces **items** that the player can use, consume, refine, or trade to get shén. Shén is a resource you **extract from things** — not one you simply gain.
+
+This makes the economy tangible. You hold shén in your inventory. You decide when to absorb it. You can hoard, trade, or refine for better yield.
+
+### Three Item Families
+
+| Family | Examples | How They Relate |
+|--------|----------|-----------------|
+| **Shén Vessels** | Qi Crystal, Soul Pearl, Faith Token, Blood Pearl | Contain shén. **Absorb** them to add shén to your dantian bar. Common, small amounts. |
+| **Shén Concentrates** | Refined Beast Core, Condensed Pill, Crystal Essence | Crafted from vessels. Contain **more** shén per item. Require alchemy/crafting to produce. |
+| **Shén Containers** | Storage Jade, Spirit Pouch, Dantian-Expanding Pill | Increase your **maximum shén capacity** — how much you can hold in your dantian at once. Rare. |
+
+Additionally, **Spirit Stones** — the universal currency — also contain a small amount of shén. Absorbing a spirit stone for shén destroys it. Using it as currency leaves it intact.
+
+---
 
 ### Tier 0 (1 S) — The Mortal
 
-| Source | How |
-|--------|-----|
-| **Event Resolution** | Story events grant shén directly. This is your only real source. |
-| **Passive Breath** | 0.001 S/tick. Negligible. You cannot cultivate yet. |
+You cannot generate anything yet. You rely entirely on finding shén in the world.
 
-You are entirely dependent on events. Every choice matters because it's your only path upward.
+| Activity | What You Get | How to Get Shén From It |
+|----------|-------------|------------------------|
+| **Resolve story events** | Shén Vessels (Qi Crystals, 0.1 S each) | Absorb the crystal. |
+| **Loot from combat encounters** | Beast Core (crude, 0.2 S) | Can absorb for 0.2 S, or keep for crafting later. |
+| **Explore ruins, caves** | Found Storage Jades (rare, contain 0.5 S) | Absorb the stored shén. Container is destroyed. |
+| **Beg, borrow, trade** | Spirit Stones (contain 0.01 S each) | Absorbing a spirit stone for shén consumes it. |
+
+At Tier 0, you find everything. You produce nothing.
+
+---
 
 ### Tier 1 (10 S) — The Initiate
 
-| New Source | How |
-|-----------|-----|
-| **Ambient Qi Absorption** | 0.01 S/tick. Meditate anywhere. Location qi density modifies this. |
-| **Beast Core Absorption** | Consume a beast core for a burst of shén (tier × 0.5 S). |
-| **Combat Victory** | Defeating enemies grants shén proportional to their power. |
-| **Discovery Events** | Exploring new locations awards bonus shén. |
+You learn to **extract** shén from the world manually.
 
-You can now cultivate passively. The world is your battery.
+| Activity | What You Get | How to Get Shén From It |
+|----------|-------------|------------------------|
+| **Ambient Qi Absorption** | Qi Crystal (crude) — 1 per hour of meditation. Contains 0.5 S. | Absorb the crystal. Or save 10 and refine them into a better crystal. |
+| **Combat Victory** | Beast Core (low-grade) — tier × 0.2 S. | Absorb for immediate shén. Or sell to merchant for 5 stones. |
+| **Herb Gathering** | Spirit Herbs — can be eaten raw (0.1 S) or used in crafting. | Eat raw: low yield. Refine: better yield (Tier 2+). |
+| **Merchant Trade** | Spend spirit stones to buy Shén Vessels. | 10 stones = 1 Qi Crystal (0.5 S). Stone absorption is inefficient. |
+| **Discovery Events** | Exploration rewards Shén Vessels. | Same as above. |
+
+**New container capacity**: Storage Jade (holds 5 S, found or basic-crafted). Increases effective dantian capacity by 5.
+
+---
 
 ### Tier 2 (1 kS) — The Practitioner
 
-| New Source | How |
-|-----------|-----|
-| **Spirit Energy (Spirit Path)** | 0.005 S/tick at thin-veil locations. Bind spirits for passive generation. |
-| **Basic Crafting (Tech Path)** | Craft talismans that store shén for later use. |
-| **Sect Cultivation Spots** | Join a sect → access qi-dense training grounds (+50% to +200% ambient rate). |
-| **Moonlight / Sunlight Absorption (Qi Path)** | Cultivate at night for lunar qi, at noon for solar qi. Each grants different bonuses. |
-| **Challenge Fights** | Sparring with equal-tier cultivators grants shén win or lose. |
+Path choice now matters. Each path produces different items. You can also **craft** basic vessels into concentrates.
 
-Choice of path now determines which sources you develop.
+| Activity | What You Get | How to Get Shén From It |
+|----------|-------------|------------------------|
+| **Qi Path: Sun/Moon Meditation** | Sun Essence (+1 S, fire-aligned) or Moon Essence (+1 S, water-aligned) per session. | Absorb directly. Or trade to alchemists. |
+| **Body Path: Physical Training** | Kinetic Residue (0.5 S per training session). Your body sheds power like skin cells. Collect and absorb. | Absorb the residue. |
+| **Spirit Path: Bind a Spirit** | Spirit generates a Soul Pearl every 100 ticks. 0.5 S each. | Absorb. Or let the spirit hold it for emergency use. |
+| **Tech Path: Basic Crafting** | Craft Shén Vessels from raw materials. 1 raw herb → 1 Qi Crystal (0.5 S) in 50 ticks. | Craft, then absorb or sell. |
+| **Sect Cultivation Spots** | +50% to +200% Qi Crystal production rate. Not a new item — a speed boost. | — |
+| **Challenge Fights** | Small Beast Cores or spirit stones. | Absorb or spend. |
+
+**Crafting unlock**: Combine 5 Qi Crystals → 1 Refined Qi Crystal (5 S, 50% bonus over absorbing raw).
+**New container**: Spirit Pouch (holds 50 S, craftable at sect workshops).
+
+---
 
 ### Tier 3 (100 kS) — The Adept
 
-| New Source | How |
-|-----------|-----|
-| **Spirit Realm Leeching (Spirit Path)** | Enter the Spirit Realm physically. Shén generation ×5 while inside — but dangerous. |
-| **Formation Gathering Arrays (Tech Path)** | Deploy formations that concentrate ambient qi. Location becomes a cultivation hub. |
-| **Beast Core Refinement (Beast Path)** | Alchemically refine cores for 3× the shén yield. |
-| **Shrine Faith (Faith Path)** | Build shrines. Followers generate passive faith shén. |
-| **Gravity Training (Body Path)** | Cultivate in high-gravity zones. Kinetic shén rate doubles — at HP cost. |
-| **Sect Missions** | Complete missions for shén rewards + sect contributions. |
+Your path solidifies. You can now **refine** for dramatically better yields and produce items that earn shén passively.
 
-Your path's identity solidifies. You are no longer a generalist.
+| Activity | What You Get | How to Get Shén From It |
+|----------|-------------|------------------------|
+| **Spirit Path: Spirit Realm Visits** | Greater Soul Pearls (5 S each). The Spirit Realm has richer concentrations. | Absorb. Risk: hostile spirits may drain them. |
+| **Tech Path: Formation Arrays** | Deployed formation produces 1 Qi Crystal per 10 ticks while active. Fully automated — collect periodically. | Absorb the crystals. Formation costs power to maintain. |
+| **Beast Path: Core Refinement (Alchemy)** | Refine a crude Beast Core (0.2 S) → Refined Beast Core (1 S, 5× yield). | Requires alchemy skill and an alchemist's shop. |
+| **Faith Path: Build a Shrine** | Shrine generates 1 Faith Token per 500 ticks per 10 followers. Faith Token = 1 S. | Absorb. Tokens decay if not collected within 1000 ticks (faith disperses). |
+| **Body Path: Gravity Training** | High-Density Kinetic Residue (2 S per session). Drains HP during training. | Absorb. HP cost makes this a tradeoff, not free. |
+| **Sect Missions** | Mission rewards include Shén Vessels, Containers, and Concentrates. | Varies by mission. |
+
+**Crafting unlock**: Refine 10 Qi Crystals → 1 Pure Qi Crystal (15 S, 50% bonus).
+**New container**: Meridian Expansion Pill (+100 S capacity, can take 3 total).
+
+---
 
 ### Tier 4 (10 MS) — The Expert — FIRST WALL
 
-| New Source | How |
-|-----------|-----|
-| **Celestial Alignment (Qi Path)** | During eclipses, solstices, and celestial events, qi absorption rate ×10 for the duration. |
-| **Body Tempering Grounds (Body Path)** | Volcanic calderas, thunder peaks, abyssal trenches. Each grants unique kinetic shén at extreme rates. |
-| **Soul Dominion (Spirit Path)** | Command bound spirits to harvest shén from death sites while you're elsewhere. Passive remote income. |
-| **Automaton Gatherers (Tech Path)** | Build automatons that farm materials and shén independently. You earn while traveling. |
-| **Temple Construction (Faith Path)** | Upgrade shrines to temples. Each temple generates 10× the faith shén and attracts followers passively. |
-| **Bloodline Awakening (Beast Path)** | Your beast gene expresses fully. Transformation grants a temporary ×3 shén generation burst. |
-| **Territory Control** | Claim a location. Earn a percentage of all shén generated there by anything — beasts, cultivators, ambient qi. |
+You now build **systems** that produce items while you're offline. This is the first wall — the wall that separates cultivators who have income streams from those who only have time.
 
-At this tier, you can generate shén even while offline from multiple parallel sources. The wall is high, but you have machines, spirits, followers, and territory working for you.
+| Activity | What You Get | How to Get Shén From It |
+|----------|-------------|------------------------|
+| **Qi Path: Celestial Alignment** | During eclipses/solstices, qi crystals form at 10× rate. A good event can net 1 kS worth of crystals. | Absorb over time — you can't absorb them all instantly. |
+| **Body Path: Extreme Training Grounds** | Volcanic, thunder, abyssal grounds produce tiered Kinetic Pearls (50 S each). | Absorb. The grounds themselves are dangerous to reach and stay in. |
+| **Spirit Path: Soul Dominion** | Command bound spirits to harvest death sites. Each spirit returns with a Soul Pearl (1 S) every 200 ticks. Multiple spirits = multiple streams. | Collect from spirits. Spirits can be sent to multiple death sites simultaneously. |
+| **Tech Path: Automaton Gatherers** | Build an automaton. It gathers materials and refines them into Shén Vessels autonomously. 1 automaton = 5 S per 100 ticks. | Automatons store their output in a hopper. Collect when you visit. |
+| **Faith Path: Build a Temple** | Temple generates Faith Tokens at 10× the rate of a shrine. Also attracts pilgrims who buy tokens with spirit stones. | Collect tokens. Sell excess to merchants. |
+| **Beast Path: Bloodline Awakening** | Unlocks a one-time burst: consume a Blood Memory (contains 100 S). Reward for completing the awakening event chain. | Must be used during breakthrough or lost. |
+| **Territory Control** | Claim a location. Earn a percentage of ALL shén vessel production in that location — from beasts, other cultivators, ambient formation. A passive tax in item form. | Collect from your territory's hoard. |
+
+**Crafting unlock**: Refine 10 Pure Qi Crystals → 1 Radiant Shén Stone (500 S, 4× yield).
+**New container**: High-Capacity Storage Jade (+1 kS capacity, requires Tech path or sect purchase).
+
+---
 
 ### Tier 5 (1 GS) — The Master — SECOND WALL
 
-| New Source | How |
-|-----------|-----|
-| **Hybrid Path Resonance** | Secondary path adds its shén type at 50% efficiency. Two paths = two parallel income streams. |
-| **Domain Cultivation** | Within your personal domain, set the laws. "Qi density = maximum." "Time flows 2× faster." Domain shén rate is uncapped. |
-| **Sect Leadership** | As an elder, you receive a stipend from the sect's collective cultivation. Other disciples generate shén for you. |
-| **Mass Conversion (Faith Path)** | Preach to cities. Convert thousands at once. Faith shén scales with follower count squared. |
-| **Ancient Beast Hunting (Beast Path)** | Hunt and consume ancient beasts. A single kill can grant millions of shén — if you survive. |
-| **Reality Insight (Tech Path)** | Discover and exploit world-rules. "Fire qi resonates at 847 Hz — triple output at volcanic locations." Permanent global bonuses. |
+You have built an empire of item production. The bottleneck is no longer finding shén — it's **refining capacity, storage capacity, and time**.
 
-The second wall. Most Masters never pass it. Those who do have built **systems** — not just cultivated harder, but set up engines that generate shén without them.
+| Activity | What You Get | How to Get Shén From It |
+|----------|-------------|------------------------|
+| **Hybrid Path Resonance** | Secondary path adds its item type. Qi + Body = Qi Crystals AND Kinetic Residue. Two parallel streams. | — |
+| **Domain Cultivation** | Within your domain, items form spontaneously from ambient energy. 1 Pure Qi Crystal per tick. | Collect daily. Storage capacity is now the limit. |
+| **Sect Leadership (Elder)** | Sect tithe: every disciple's cultivation produces a fraction that flows to you. 1 S per 100 ticks per 10 disciples. | Collect from sect treasury. |
+| **Faith Path: Mass Conversion** | Preach to a city. Gain thousands of followers. Faith Tokens now come from entire cities — 1 kS worth per day. | Collect from temples. Storage is the bottleneck. |
+| **Beast Path: Ancient Beast Hunt** | Kill an ancient beast. Its core contains 100 kS — the single largest shén item in the game. But it must be refined before absorption (requires Tier 5 crafting or an alchemist). | Refine the core (100 kS). Or sell it for a fortune. |
+| **Tech Path: Reality Insight** | Unlock permanent crafting knowledge. "Fire qi at volcanic locations crafts 3× faster." Not a source — a multiplier on all other sources. | — |
+
+**Crafting unlock**: Refine 10 Radiant Shén Stones → 1 Astral Shén Core (50 kS, 5× yield).
+**New container**: Void Storage Ring (+100 kS capacity, legendary-tier).
+
+---
 
 ### Tier 6 (100 GS) — The Grandmaster — THIRD WALL
 
-| New Source | How |
-|-----------|-----|
-| **Pocket Dimension (Tech/Any)** | Create a sub-realm with custom physics. Set gravity to 100× for body training. Set qi density to maximum. Time passes at 10× speed. Cultivate inside for a day, emerge hours later with months of progress. |
-| **Reincarnation Memory (Spirit Path)** | Past life knowledge unlocks. Permanent ×2 to all shén generation — your soul has done this before. |
-| **Heavenly Dao Comprehension (Qi Path)** | Comprehend the Dao directly. Does not generate shén — it **reduces the threshold** for the next tier. The wall becomes shorter. |
-| **Legendary Beast Consumption (Beast Path)** | A single boss-tier ancient beast can contain enough bloodline shén to clear an entire tier. Finding one is the quest. |
-| **Ascended Deity Worship (Faith Path)** | You become the object of worship. Every prayer generates shén. At this tier, millions pray to you. |
+You shape reality. Your items are no longer "things you find" — you **create them from nothing** by bending the rules.
 
-The third wall. Reality itself becomes your cultivation tool.
+| Activity | What You Get | How to Get Shén From It |
+|----------|-------------|------------------------|
+| **Pocket Dimension (Tech/Any)** | Build a sub-realm where time passes 10× faster. Cultivate there for a day = 10 days of crystal production. A single visit yields 10 kS worth of vessels. | Collect from dimension pocket. |
+| **Spirit Path: Reincarnation Memory** | Past life knowledge unlocks permanent crafting knowledge. "Combine metals in this order and you get +2× yield on all refining." | Passive multiplier on everything you already do. |
+| **Qi Path: Heavenly Dao Comprehension** | Does not produce items. **Reduces the tier threshold** — you need 50 GS, not 100 GS. The wall becomes a hill. | No items. Just a lower requirement. |
+| **Beast Path: Legendary Beast Consumption** | A boss-tier ancient beast contains an Astral Beast Core (10 kS). But it must be consumed slowly — 1 kS per day, or the energy destroys your dantian. | A timed process. You can't rush it. |
+| **Faith Path: Ascended Deity** | You ARE the source now. Every prayer anywhere produces a Faith Token automatically. 1 M followers = 1 MS per day in tokens. | They appear in your temples. Collect or let them accumulate. |
+
+**Crafting unlock**: Refine 10 Astral Shén Cores → 1 Primordial Shén Origin (10 MS, 10× yield). The most powerful shén item in the game.
+**New container**: Dimensional Storage (+10 GS capacity, grows with you to +100 GS at Tier 7).
+
+---
 
 ### Tier 7 (10 TS) — The Ascendant
 
-| New Source | How |
-|-----------|-----|
-| **Immortal's Mandate** | Heaven acknowledges you. The Celestial Court grants a permanent shén stipend — the universe itself invests in your ascension. |
-| **Dao Fusion** | Merge your primary and secondary paths. 100% + 50% → 150% of both, not additive. |
+You are preparing for the final step. Your sources are no longer relevant — you have more items than you can possibly absorb.
 
-At this tier, you are preparing for the final step. Every source is open. The only question is whether you can gather enough before the tribulation comes.
-
----
-
-### Generation Rate Summary
-
-| Source | Unlocked At | Rate at Unlock | Rate at Tier 7 |
-|--------|------------|---------------|----------------|
-| Event Resolution | Tier 0 | 0.1–5 S/event | 100 S–10 kS/event |
-| Ambient Qi | Tier 1 | 0.01 S/tick | 500 S/tick |
-| Beast Core Consumption | Tier 1 | 0.5 S/core | 50 kS/core (ancient) |
-| Spirit Energy (death sites) | Tier 2 | 0.005 S/tick | 1,000 S/tick |
-| Sect Cultivation Spots | Tier 2 | +50% ambient | +500% ambient |
-| Crafted Talismans | Tier 2 | Store 1 S | Store 100 kS |
-| Formation Arrays | Tier 3 | +100% ambient at location | +1,000% ambient at location |
-| Shrines (Faith) | Tier 3 | 0.01 S/tick | 100 S/tick per shrine |
-| Automaton Gatherers | Tier 4 | 0.1 S/tick each | 1,000 S/tick each |
-| Territory Control | Tier 4 | 1% of location output | 10% of location output |
-| Domain Cultivation | Tier 5 | 2× normal rate | 10× normal rate |
-| Pocket Dimension | Tier 6 | Custom (up to 100×) | Custom (up to 1,000×) |
-| Immortal's Mandate | Tier 7 | 10 kS/tick | 10 kS/tick (fixed) |
+| Activity | What You Get | How to Get Shén From It |
+|----------|-------------|------------------------|
+| **Immortal's Mandate** | Heaven itself sends you Cosmic Resonance Crystals (1 kS each, 10 per day). | Absorb. This is the only "direct" shén in the game — you earned it by reaching Tier 7. |
+| **Dao Fusion** | Your two paths merge. All production rates double. | — |
 
 ---
 
-## Shén in Events
+### Item Catalog — Shén Vessels (Absorb for Shén)
 
-Events award shén directly. The scale is the same regardless of path:
+| Item | Shén Per Unit | Tier Available | Source |
+|------|--------------|----------------|--------|
+| Spirit Stone | 0.01 S | 0 | Currency, found everywhere |
+| Qi Crystal (crude) | 0.5 S | 1 | Ambient meditation |
+| Beast Core (low) | 0.2 S | 1 | Weak beasts |
+| Kinetic Residue | 0.5 S | 2 | Body training |
+| Soul Pearl | 0.5 S | 2 | Bound spirits |
+| Sun Essence | 1 S | 2 | Qi Path — daytime meditation |
+| Refined Beast Core | 1 S | 3 | Alchemy (5× yield over raw) |
+| Faith Token | 1 S | 3 | Shrines |
+| Greater Soul Pearl | 5 S | 3 | Spirit Realm |
+| Pure Qi Crystal | 15 S | 3 | Crafting (10× Refined yield) |
+| Kinetic Pearl | 50 S | 4 | Extreme training grounds |
+| Radiant Shén Stone | 500 S | 4 | Crafting (4× yield) |
+| Blood Memory | 100 S | 4 | Beast Awakening (one-time) |
+| Ancient Beast Core | 100 kS | 5 | Ancient beast kill (needs refining) |
+| Astral Shén Core | 50 kS | 5 | Crafting (5× yield) |
+| Astral Beast Core | 10 kS | 6 | Legendary beast (timed consumption) |
+| Primordial Shén Origin | 10 MS | 6 | Crafting (10× yield, highest tier item) |
+| Cosmic Resonance Crystal | 1 kS | 7 | Immortal's Mandate |
 
-| Event Scale | Shén | Example |
-|-------------|------|---------|
-| Minor | 0.1–0.5 S | Fought a beast, found a herb |
-| Moderate | 0.5–2 S | Resolved a quest step, saved an NPC |
-| Major | 2–10 S | Story milestone, breakthrough event |
-| Epic | 10–100 S | Path choice, hybridization |
-| Legendary | 100–1,000 S | Ascension, ancient inheritance |
+### Item Catalog — Shén Containers (Increase Capacity)
+
+| Item | Capacity Increase | Tier Available | Source |
+|------|------------------|----------------|--------|
+| Storage Jade (small) | +5 S | 1 | Found, basic craft |
+| Spirit Pouch | +50 S | 2 | Sect workshop, merchant |
+| Meridian Expansion Pill | +100 S | 3 | Alchemy (max 3 doses) |
+| High-Capacity Storage Jade | +1 kS | 4 | Tech path or sect purchase |
+| Void Storage Ring | +100 kS | 5 | Legendary-tier |
+| Dimensional Storage | +10 GS | 6 | Increases to +100 GS at Tier 7 |
+
+### Using Items in the UI
+
+```
+┌──────────────────────────────────────────────────────────┐
+│  🎒 INVENTORY                                            │
+│                                                          │
+│  Shén Bar: ████████░░ 850 S / 10 kS                      │
+│                                                          │
+│  Shén Vessels (4 items):                                 │
+│  ┌────────────────────────────────────────────────┐      │
+│  │ 💎 Pure Qi Crystal (×5) — Absorb for 15 S each │      │
+│  │    [Absorb All]  [Absorb 1]  [Keep in Inventory]│      │
+│  └────────────────────────────────────────────────┘      │
+│  ┌────────────────────────────────────────────────┐      │
+│  │ 💎 Spirit Stones (×24) — Absorb for 0.01 S each│      │
+│  │    [Absorb All]  [Use as Currency]             │      │
+│  └────────────────────────────────────────────────┘      │
+│                                                          │
+│  Shén Containers (1 item):                               │
+│  ┌────────────────────────────────────────────────┐      │
+│  │ 🏺 Meridian Expansion Pill (+100 S capacity)    │      │
+│  │    [Use]                                        │      │
+│  └────────────────────────────────────────────────┘      │
+└──────────────────────────────────────────────────────────┘
+```
 
 ---
 

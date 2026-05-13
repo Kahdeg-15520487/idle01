@@ -273,11 +273,11 @@ You shape reality. Your items are no longer "things you find" — you **create t
 
 ### Tier 7 (10 TS) — The Ascendant
 
-You are preparing for the final step. Your sources are no longer relevant — you have more items than you can possibly absorb.
+You are preparing for the final step. Your existence alone creates phenomena.
 
 | Activity | What You Get | How to Get Shén From It |
 |----------|-------------|------------------------|
-| **Immortal's Mandate** | Heaven itself sends you Cosmic Resonance Crystals (1 kS each, 10 per day). | Absorb. This is the only "direct" shén in the game — you earned it by reaching Tier 7. |
+| **Shén Pressure Crystallization** | Your dantian is so dense that ambient energy crystallizes around you spontaneously. Cosmic Resonance Crystals (1 kS each, 10 per day) form on your skin, your clothes, the air near you. | Pluck and absorb. This is not a gift from Heaven. Heaven is simply *near* you, and reality reacts. |
 | **Dao Fusion** | Your two paths merge. All production rates double. | — |
 
 ---
@@ -303,7 +303,7 @@ You are preparing for the final step. Your sources are no longer relevant — yo
 | Astral Shén Core | 50 kS | 5 | Crafting (5× yield) |
 | Astral Beast Core | 10 kS | 6 | Legendary beast (timed consumption) |
 | Primordial Shén Origin | 10 MS | 6 | Crafting (10× yield, highest tier item) |
-| Cosmic Resonance Crystal | 1 kS | 7 | Immortal's Mandate |
+| Cosmic Resonance Crystal | 1 kS | 7 | Shén pressure crystallization (passive, Tier 7) |
 
 ### Item Catalog — Shén Containers (Increase Capacity)
 

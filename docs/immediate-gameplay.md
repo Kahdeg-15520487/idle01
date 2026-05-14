@@ -338,49 +338,48 @@ After resolving these events, the player has accumulated shén vessels in their 
 
 ---
 
-## The Event Queue — What Happens When The Player Is Away
+## Secluded Meditation — What Happens When The Player Is Away
 
-The game doesn't just "tick cultivation in the background." While the player is away, **events accumulate in a queue**:
+When the player closes the tab or goes AFK for more than 2 minutes, the game enters **secluded meditation**. The character withdraws to a quiet place and cultivates in seclusion. **No events fire** — the world pauses around you. This keeps the return experience clean: you see what you gained, not a backlog of choices.
 
 ```
-┌──────────────────────────────────────────────────────────┐
-│  ⚡ WHILE YOU WERE AWAY (3h 12m)                          │
+┌──────────────────────────────────────────────────────────────────────
+│  🧘 SECLUDED MEDITATION — 3h 12m                         │
 │                                                          │
-│  The world did not stop. Events accumulated:              │
+│  You withdrew from the world and entered deep            │
+│  meditation. The world can wait.                         │
 │                                                          │
-│  ┌──────────────────────────────────────────────────┐    │
-│  │ 📜 A merchant passed through the village.          │    │
-│  │    She left word that she'll return in 3 days     │    │
-│  │    with goods from Green Jade City.               │    │
-│  │    [ Pending — talk to Old Guo for details ]      │    │
-│  └──────────────────────────────────────────────────┘    │
-│  ┌──────────────────────────────────────────────────┐    │
-│  │ 👤 Wei Liang has recovered enough to walk.         │    │
-│  │    He's been asking about you. He has more to     │    │
-│  │    share about the seal — but only with you.      │    │
-│  │    [ Pending — visit the healer's hut ]           │    │
-│  └──────────────────────────────────────────────────┘    │
-│  ┌──────────────────────────────────────────────────┐    │
-│  │ 🌙 Something watches the village at night.         │    │
-│  │    Old Guo has seen a shape on the ridge — a      │    │
-│  │    shadow that doesn't move like an animal.       │    │
-│  │    (Your Spirit Sight may reveal more.)           │    │
-│  │    [ Pending — investigate the eastern ridge ]    │    │
-│  └──────────────────────────────────────────────────┘    │
+│  ┌─────────────────────────────────────────────────────────────┘│
+│  │  📊 Meditation Results                           ││
+│  │                                                  ││
+│  │  Time away: 3h 12m                               ││
+│  │  Shén gained: +843 S (from passive circulation)   ││
+│  │  Qi Crystals formed: 2 (byproduct)               ││
+│  │  Total shén now: 1,245 S / 10 kS                 ││
+│  │  Tier progress: +8%                              ││
+│  │                                                  ││
+│  └─────────────────────────────────────────────────────────────┘│
 │                                                          │
-│  Additionally, meditation continued while you were      │
-│  away:                                                    │
-│    • +84 shén from passive meditation                     │
-│    • 2 Qi Crystals formed in your inventory (byproduct)  │
-│    • Moondew Bloom matured                               │
+│  Nothing happened while you were away.                   │
+│  No one needed you. The world continued, and so          │
+│  did your cultivation.                                   │
 │                                                          │
-│  [ Begin Resolving Events ]                              │
-└──────────────────────────────────────────────────────────┘
+│  [ Return to Game ]                                      │
+└─────────────────────────────────────────────────────────────┘
 ```
 
-The player returns to find **a queue of story events**, each gated by different stats/items/relationships. Cultivation progressed, but **as a function of past story choices**, not a generic "cultivate" action.
+**Key design choice**: No event queue. No backlog of choices. The player never returns to a pile of unresolved situations. This keeps the idle experience low-anxiety — you left, you meditated, you came back stronger. That’s it.
 
----
+### What Actually Happens Behind the Scenes
+
+While the player is away:
+1. Meditation continues at normal rate (if it was toggled on)
+2. Any passive generation systems (spirits, formations, automatons) continue
+3. **No random encounters fire**
+4. **No story events trigger**
+5. **No time-limited events expire** — the world freezes around you
+
+The tradeoff: you gain shén but you don’t progress the story. If you want story progress, stay active. If you want raw cultivation, seclusion is always available.
 
 ## What The Player Has Learned (Minute 60)
 
@@ -395,7 +394,7 @@ The player returns to find **a queue of story events**, each gated by different 
 | Karma unlocked Mother Shen's help | Past moral choices open new resolution paths. |
 | I found a beast core and had to choose: absorb or hoard? | Shén vessels are items I decide to use. Economy is tactile. |
 | I toggled meditation and left the tab open | Internal flow fills my bar even when I'm not resolving events. |
-| Returning after 3 hours gave me a queue | The world generates events even when I'm gone. |
+| Returning after 3 hours showed meditation results | I can AFK safely — the world waits, I just gain shén. No backlog. |
 
 ---
 
@@ -537,16 +536,16 @@ EVENT 4: BREAKTHROUGH (triggered by accumulated Qi)
   └─ Milestone completed
        │
        ▼
-(OFFLINE: 3 hours pass)
+(OFFLINE: 3 hours pass — secluded meditation)
        │
        ▼
-RETURN: 3 new events in queue
-  ├─ Merchant returning (pending)
-  ├─ Wei Liang has more to share (pending)
-  └─ Shadow on the ridge — Spirit Sight may reveal (pending)
+RETURN: Clean summary
+  ├─ +843 shén gained from meditation
+  ├─ 2 Qi Crystals formed (byproduct)
+  └─ No events pending. The world waited.
 ```
 
-At no point did the player press a "cultivate" button or a "breakthrough" button. Every mechanical action was **a story choice with consequences**. The idle aspect is that **events queue up while you're away**, and your past choices determine which events appear.
+At no point did the player press a "cultivate" button or a "breakthrough" button. Every mechanical action was **a story choice with consequences**. The idle aspect is that **the world pauses when you leave** — you return stronger, not backlogged.
 
 ---
 

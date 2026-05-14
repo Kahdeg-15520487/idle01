@@ -154,11 +154,11 @@ Breakthrough fires as an **event** when shén bar reaches tier threshold:
 At Tier 3, the player chooses their path. The game stores this choice. Post-MVP content will branch from here.
 
 ### Idle / Offline
-- While away: time passes, meditation continues (if toggled), events may accumulate
-- On return: summary screen — "While you were away..."
-- Events queue up (capped at 5)
-- Shén vessels accumulate (from passive sources, if unlocked)
-- World state may shift (NPC movements, location changes)
+- When away, the player enters **secluded meditation** — no events fire, world pauses
+- Meditation continues at normal rate
+- On return: summary screen showing time elapsed and shén gained
+- No event queue. No backlog of choices.
+- The tradeoff: you gain shén but don't progress the story while away
 
 ### Save / Load
 - Auto-save on every event resolution
@@ -509,7 +509,7 @@ idle_cultivation_sect/
 | Is meditation enough as the core idle action? | Toggle it on, do other things, come back to a fuller bar |
 | Do locked choices motivate stat growth? | "Need Comprehension 10 — time to meditate and make smart choices" |
 | Does the path choice feel meaningful? | Two very different paths presented at Tier 3 — player anticipates the gameplay shift |
-| Does offline catch-up feel rewarding? | Return to a queue of events and accumulated shén |
+| Does offline catch-up feel rewarding? | Return to a clean summary of shén gained. No backlog anxiety. |
 | Is the MVP fun for 2+ hours? | Playtesters reach Tier 3, choose a path, want to see what comes next |
 
 ---

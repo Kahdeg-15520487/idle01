@@ -1,0 +1,312 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #1a1a2e;
+  --bg2: #16213e;
+  --bg3: #0f3460;
+  --accent: #e2b04a;
+  --accent2: #4ecca3;
+  --danger: #e74c3c;
+  --text: #e0e0e0;
+  --text2: #a0a0a0;
+  --border: #2a2a4e;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#app {
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── Header ───────────────────────────── */
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border);
+}
+
+#title { font-size: 18px; font-weight: bold; color: var(--accent); }
+#player-info { font-size: 14px; color: var(--text2); }
+
+/* ─── Tabs ─────────────────────────────── */
+
+#tabs {
+  display: flex;
+  gap: 0;
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border);
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  color: var(--text2);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab-btn:hover { color: var(--text); background: var(--bg3); }
+.tab-btn.active { color: var(--accent); border-bottom: 2px solid var(--accent); }
+
+/* ─── Main Content ─────────────────────── */
+
+#main-content {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.placeholder {
+  text-align: center;
+  padding: 40px 16px;
+  color: var(--text2);
+}
+
+/* ─── Event Card ───────────────────────── */
+
+.event-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.event-title { font-size: 20px; font-weight: bold; color: var(--accent); margin-bottom: 4px; }
+.event-location { font-size: 12px; color: var(--text2); margin-bottom: 12px; }
+.event-description { font-size: 14px; line-height: 1.7; margin-bottom: 16px; white-space: pre-wrap; }
+
+.event-choices { display: flex; flex-direction: column; gap: 8px; }
+
+.choice-btn {
+  width: 100%;
+  padding: 12px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: pre-wrap;
+}
+
+.choice-btn:hover:not(.locked) { background: #1a4a7a; border-color: var(--accent); }
+.choice-btn.locked { opacity: 0.5; cursor: not-allowed; }
+.choice-tip { display: block; font-size: 11px; color: var(--text2); margin-top: 4px; }
+.lock-reason { display: block; font-size: 11px; color: var(--danger); margin-top: 4px; }
+
+/* ─── Cultivate Tab ────────────────────── */
+
+.cultivate-panel { background: var(--bg2); border-radius: 8px; padding: 16px; }
+.cultivate-panel h3 { margin-bottom: 12px; color: var(--accent); }
+
+.shen-bar-container {
+  width: 100%;
+  height: 24px;
+  background: var(--bg3);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+.shen-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent2), var(--accent));
+  transition: width 0.3s ease;
+  border-radius: 12px;
+}
+
+.shen-label { font-size: 12px; color: var(--text2); margin-bottom: 12px; }
+
+#meditate-btn {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid var(--accent2);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--accent2);
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 16px;
+  transition: all 0.2s;
+}
+
+#meditate-btn:hover { background: var(--accent2); color: var(--bg); }
+#meditate-btn.active { background: var(--accent2); color: var(--bg); }
+
+.cultivate-info { margin-bottom: 16px; }
+.cultivate-info div { font-size: 13px; color: var(--text2); margin-bottom: 4px; }
+
+.shen-vessels h4 { color: var(--accent2); margin-bottom: 8px; font-size: 14px; }
+.vessel-item { display: flex; align-items: center; gap: 8px; padding: 8px; background: var(--bg3); border-radius: 4px; margin-bottom: 4px; font-size: 13px; }
+.vessel-shen { color: var(--accent2); font-weight: bold; margin-left: auto; }
+.absorb-btn { padding: 4px 12px; background: var(--accent2); border: none; border-radius: 4px; color: var(--bg); cursor: pointer; font-size: 12px; }
+.absorb-btn:hover { background: #3db882; }
+
+/* ─── Self Tab ─────────────────────────── */
+
+#self-stats, #self-equipment, #self-inventory { background: var(--bg2); border-radius: 8px; padding: 12px; margin-bottom: 8px; }
+#self-stats h3, #self-equipment h3, #self-inventory h3 { color: var(--accent); font-size: 14px; margin-bottom: 8px; }
+#self-stats table { width: 100%; font-size: 13px; }
+#self-stats td { padding: 2px 8px; }
+#self-stats td:nth-child(odd) { color: var(--text2); }
+#self-stats td:nth-child(even) { color: var(--text); }
+#equipped-weapon { font-size: 13px; margin-bottom: 8px; }
+#equip-actions { display: flex; flex-wrap: wrap; gap: 4px; }
+#equip-actions button, #unequip-btn { padding: 4px 10px; background: var(--bg3); border: 1px solid var(--border); border-radius: 4px; color: var(--text); cursor: pointer; font-size: 12px; }
+#equip-actions button:hover { border-color: var(--accent); }
+
+.inv-item { display: flex; align-items: center; gap: 8px; padding: 6px; background: var(--bg3); border-radius: 4px; margin-bottom: 2px; font-size: 13px; }
+.inv-type { font-size: 10px; color: var(--text2); background: var(--bg); padding: 2px 6px; border-radius: 3px; }
+.empty { color: var(--text2); font-style: italic; padding: 8px; }
+
+/* ─── World Tab ────────────────────────── */
+
+.world-panel { background: var(--bg2); border-radius: 8px; padding: 16px; }
+.world-panel h3 { color: var(--accent); margin-bottom: 8px; }
+.world-panel p { font-size: 14px; line-height: 1.6; margin-bottom: 4px; }
+
+.neighbors { display: flex; flex-direction: column; gap: 8px; margin-top: 16px; }
+.travel-btn { padding: 12px; background: var(--bg3); border: 1px solid var(--border); border-radius: 6px; color: var(--text); cursor: pointer; font-size: 14px; text-align: left; transition: all 0.2s; }
+.travel-btn:hover { background: #1a4a7a; border-color: var(--accent); }
+.travel-progress { margin-top: 16px; padding: 16px; background: var(--bg3); border-radius: 8px; }
+.travel-progress div { margin-bottom: 8px; }
+
+/* ─── Log Tab ──────────────────────────── */
+
+#log-entries { display: flex; flex-direction: column; gap: 2px; }
+.log-entry { padding: 6px 8px; border-radius: 4px; font-size: 13px; color: var(--text2); }
+.log-entry.breakthrough { color: var(--accent); background: var(--bg3); }
+.log-entry.combat { color: var(--danger); }
+.log-entry.event { color: var(--text); }
+.log-entry.item { color: var(--accent2); }
+
+/* ─── Combat View ──────────────────────── */
+
+.combat-view { background: var(--bg2); border-radius: 8px; padding: 16px; }
+.combat-view h3 { color: var(--danger); margin-bottom: 12px; }
+.combat-hp { margin-bottom: 12px; }
+.combat-hp div { font-size: 14px; margin-bottom: 4px; }
+.combat-log { background: var(--bg3); border-radius: 4px; padding: 8px; min-height: 100px; margin-bottom: 12px; }
+.combat-line { font-size: 13px; padding: 2px 0; border-bottom: 1px solid var(--border); }
+.combat-view button { padding: 10px 20px; margin-right: 8px; border: 1px solid var(--border); border-radius: 6px; background: var(--bg3); color: var(--text); cursor: pointer; font-size: 14px; }
+.combat-view button:hover { background: #1a4a7a; }
+.combat-result { font-size: 24px; text-align: center; padding: 16px; margin-bottom: 8px; }
+.combat-result.victory { color: var(--accent); }
+.combat-result.defeat { color: var(--danger); }
+
+/* ─── Character Creation ───────────────── */
+
+#creation-screen {
+  padding: 24px;
+  text-align: center;
+}
+
+#creation-screen h1 {
+  color: var(--accent);
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.creation-section {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.creation-section label {
+  display: block;
+  font-size: 14px;
+  color: var(--text2);
+  margin-bottom: 8px;
+}
+
+#name-input {
+  width: 100%;
+  padding: 12px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 16px;
+  outline: none;
+}
+
+#name-input:focus { border-color: var(--accent); }
+
+.creation-choices { display: flex; flex-direction: column; gap: 8px; }
+
+.radio-card {
+  display: block;
+  padding: 12px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 1.5;
+  transition: all 0.2s;
+}
+
+.radio-card:hover { border-color: var(--accent); }
+.radio-card input[type="radio"] { margin-right: 8px; }
+.radio-card strong { color: var(--accent); }
+
+#begin-btn {
+  width: 100%;
+  padding: 16px;
+  background: var(--accent);
+  border: none;
+  border-radius: 8px;
+  color: var(--bg);
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: all 0.2s;
+}
+
+#begin-btn:hover { background: #c9a040; }
+
+/* ─── Status Bar ───────────────────────── */
+
+#status-bar {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 16px;
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--text2);
+  flex-shrink: 0;
+}
+
+#status-shen { color: var(--accent2); }
+#status-hp { color: var(--danger); }
+#status-tier { color: var(--accent); }
+
+/* ─── Responsive ───────────────────────── */
+
+@media (max-width: 480px) {
+  #header { padding: 8px 12px; }
+  #title { font-size: 16px; }
+  #main-content { padding: 12px; }
+  .event-title { font-size: 18px; }
+}

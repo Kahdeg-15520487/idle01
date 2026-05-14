@@ -24,9 +24,10 @@
 │        ▼                                                │
 │   OUTCOME plays out (flavor text + mechanical effects)  │
 │        │                                                │
-│        ├──▶ Cultivation advances (Qi gained)             │
+│        ├──▶ Items gained (shén vessels — absorb or       │
+│        │      hoard, trade or refine)                    │
 │        ├──▶ Stats change (permanent or temporary)        │
-│        ├──▶ Items gained or lost                         │
+│        ├──▶ Items lost from inventory                    │
 │        ├──▶ Reputation shifts                            │
 │        ├──▶ New locations revealed                       │
 │        ├──▶ Relationships form or break                  │
@@ -297,7 +298,7 @@ Milestone progress: "The First Step" — 2/3 completed.
 
 ## Minute 10: The Breakthrough Is A Story Beat
 
-After resolving these events, the player's Qi has accumulated to 30 — more than enough for the first breakthrough. But it doesn't happen automatically, and there's no "breakthrough button." Instead, the accumulated Qi **triggers an event**:
+After resolving these events, the player has accumulated shén vessels in their inventory — beast cores, spirit herbs, qi crystals from meditating. They can **absorb** these vessels to fill their shén bar (or hoard them for later, or trade them). When the bar reaches 10 S (the Tier 1 threshold), a breakthrough event triggers:
 
 ```
 ╔══════════════════════════════════════════════════════════╗
@@ -309,12 +310,10 @@ After resolving these events, the player's Qi has accumulated to 30 — more tha
 ║  the choice to help — have stirred something in your      ║
 ║  dantian.                                                 ║
 ║                                                          ║
-║  The qi you've absorbed from these experiences — the       ║
-║  tension of the hunt, the warmth of gratitude, the        ║
-║  weight of new responsibility — it swirls and presses     ║
-║  against the walls of your spirit.                        ║
+║  The shén you've accumulated from vessels and meditation   ║
+║  presses against the walls of your spirit.                 ║
 ║                                                          ║
-║  YOUR DANTIAN IS STIRRING.                                ║
+║  YOUR SHÉN BAR IS FULL.                                   ║
 ║  A breakthrough is imminent.                              ║
 ║                                                          ║
 ║  But how you approach it matters.                         ║
@@ -322,56 +321,19 @@ After resolving these events, the player's Qi has accumulated to 30 — more tha
 ╚══════════════════════════════════════════════════════════╝
 
 ┌──────────────────────────────────────────────────────┐
-│  🧘 "Meditate calmly. Let the qi settle naturally."   │
-│     Standard breakthrough. 78% success chance.        │
-│     Slow and steady.                                  │
+│  🧘 "Meditate calmly. Let the shén settle naturally." │
+│     Standard breakthrough. 75% success chance.       │
+│     Steady.                                          │
 └──────────────────────────────────────────────────────┘
 ┌──────────────────────────────────────────────────────┐
-│  ⚡ "Force the breakthrough. Ride the momentum of      │
-│     everything that's happened."                      │
-│     +15% breakthrough chance. But if it fails, the    │
-│     backlash is worse (qi deviation risk doubled).    │
+│  ⚡ "Force the breakthrough. Ride the momentum."      │
+│     +15% chance. Failure is worse (qi deviation).    │
 └──────────────────────────────────────────────────────┘
 ┌──────────────────────────────────────────────────────┐
-│  🌑 "Use the shadow qi I absorbed from the wolf."     │
-│     (Requires: Dark affinity 20+)                     │
-│     Channel the dark beast core you acquired into     │
-│     the breakthrough. Consume the core. +25% chance.  │
-│     Your dark affinity grows stronger.                │
+│  🙏 "Ask Mother Shen to guide me."                   │
+│     (Requires: Karma 3+)                              │
+│     +20% chance. +3 Comprehension from her teaching.  │
 └──────────────────────────────────────────────────────┘
-┌──────────────────────────────────────────────────────┐
-│  🙏 "Ask Mother Shen to guide me."                    │
-│     (Requires: Karma 5+)                              │
-│     The village healer knows old cultivation wisdom.  │
-│     She stabilizes the process. +20% chance.          │
-│     Gain +3 Comprehension from her teaching.          │
-└──────────────────────────────────────────────────────┘
-```
-
-**The breakthrough is an event like any other.** The player's past choices (acquiring the beast core, earning karma) gate new options. The resolution grants more than just "realm up" — it can change affinities, grant knowledge, or have consequences.
-
-The player picks option 4. Mother Shen helps:
-
-```
-Mother Shen places a weathered hand on your back.
-"Breathe, child. The qi is like water. Don't fight it.
-Guide it. Like you guide a broom across these steps."
-
-BREAKTHROUGH SUCCESSFUL.
-
-The walls of your dantian expand. You feel the world
-differently now — colors are sharper, sounds carry meaning,
-the shadows themselves seem to whisper at the edge of
-hearing.
-
-QI CONDENSATION, LAYER 1.
-
-+5 Attack, +5 Defense, +20 Max HP.
-+3 Comprehension (Mother Shen's teaching).
-New location discovered: Misty Peaks.
-Milestone: "The First Step" — COMPLETED.
-
-Title earned: "Azure Cloud's Son"
 ```
 
 ---
@@ -406,10 +368,11 @@ The game doesn't just "tick cultivation in the background." While the player is 
 │  │    [ Pending — investigate the eastern ridge ]    │    │
 │  └──────────────────────────────────────────────────┘    │
 │                                                          │
-│  Additionally, passive cultivation occurred based on     │
-│  your past event resolution patterns:                    │
-│    • +84 Qi (from the lingering effects of events)       │
-│    • Moondew Bloom has matured in your inventory        │
+│  Additionally, meditation continued while you were      │
+│  away:                                                    │
+│    • +84 shén from passive meditation                     │
+│    • 2 Qi Crystals formed in your inventory (byproduct)  │
+│    • Moondew Bloom matured                               │
 │                                                          │
 │  [ Begin Resolving Events ]                              │
 └──────────────────────────────────────────────────────────┘
@@ -430,6 +393,8 @@ The player returns to find **a queue of story events**, each gated by different 
 | Saving the cultivator created a chain | My choices create future events. The story branches. |
 | Breakthrough was an event, not a button | Even core progression is story-driven. |
 | Karma unlocked Mother Shen's help | Past moral choices open new resolution paths. |
+| I found a beast core and had to choose: absorb or hoard? | Shén vessels are items I decide to use. Economy is tactile. |
+| I toggled meditation and left the tab open | Internal flow fills my bar even when I'm not resolving events. |
 | Returning after 3 hours gave me a queue | The world generates events even when I'm gone. |
 
 ---
@@ -440,9 +405,9 @@ The game has one primary screen — the **event view** — with supporting tabs:
 
 ```
 ┌──────────────────────────────────────────────────────────┐
-│  ⛩️ Li Wei — Qi Condensation L2    [+3 events pending]    │
+│  ⛩️ Li Wei — Tier 1 (Initiate)    [+3 events pending]    │
 ├──────────────────────────────────────────────────────────┤
-│  [ Event ] [ World ] [ Self ] [ Relationships ] [ Log ]   │
+│  [ Event ] [ Cultivate ] [ Self ] [ World ] [ Log ]      │
 ├──────────────────────────────────────────────────────────┤
 │                                                          │
 │  ╔══════════════════════════ EVENT ══════════════════════╗│
@@ -462,7 +427,7 @@ The game has one primary screen — the **event view** — with supporting tabs:
 │  └────────────────────────────────────────────────────┘   │
 │                                                          │
 ├──────────────────────────────────────────────────────────┤
-│  ⏳ 3 events pending  │  Qi: 112  │  💎 18  │  Karma: +5  │
+│  ⏳ 3 events pending  │  Shén: 112 S / 10 kS  │  💎 18  │  Karma: +5  │
 └──────────────────────────────────────────────────────────┘
 ```
 
@@ -482,24 +447,31 @@ The story so far. Every event you've resolved, choice you've made, consequence t
 
 ## How Cultivation Actually Works In This Model
 
-There is no "cultivate" button. Cultivation progresses through:
+There is no "cultivate" button. Cultivation progresses through **two parallel systems**:
 
-| Source | Example |
-|--------|---------|
-| **Resolving events** | Each event resolution grants Qi proportional to its significance |
-| **Making difficult choices** | Higher-stakes choices grant more Qi |
-| **Surviving danger** | Combat victories, narrow escapes, tribulations |
-| **Learning secrets** | Discovering lore, studying ancient texts, communing with spirits |
-| **Forming bonds** | Helping NPCs, earning trust, building relationships |
-| **Time passing** | Passive Qi accumulation based on your **event resolution rate** — the more events you resolve, the faster your "background" cultivation |
+| System | How It Works |
+|--------|-------------|
+| **Internal Flow** 🧘 | **Meditation** — toggle it on. Shén flows directly into your dantian bar over time. This is the only source of "free" shén. No item required. |
+| **External Extraction** 💎 | **Shén Vessels** — beast cores, qi crystals, spirit herbs. You find them as event rewards. You must **absorb** them from inventory to add their shén to your bar. You can also hoard, trade, or refine them. |
 
-The formula for passive cultivation becomes:
+### Sources of Shén Vessels
+
+| Source | Example | Shén Yield |
+|--------|---------|------------|
+| Event resolution | "You found a Qi Crystal" | 0.5 S |
+| Beast kill | Beast Core (low) | 0.2 S |
+| Exploration | Found Storage Jade | 0.5 S (contains 5 S capacity) |
+| Merchant trade | Buy a Qi Crystal | 0.5 S |
+
+### Passive Shén Over Time
 
 ```
-Passive Qi per hour = Base rate × (events resolved today / 10) × realm multiplier
+Passive shén per tick = 0 (without meditation)
+                       + 0.01 S/tick (meditating at Tier 0)
+                       + (tier × 0.01) S/tick (meditating at higher tiers)
 ```
 
-This means **active players who resolve events cultivate faster**, while idle players still progress — but slower. The incentive to engage is built into the system.
+This means **active players who resolve events** get shén from vessels. **Idle players** still get shén from meditation while toggled. Both progress — but active players progress faster because vessels contain more shén than meditation provides.
 
 ---
 

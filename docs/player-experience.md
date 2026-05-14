@@ -233,29 +233,33 @@ The **world is talking**. Li Wei has heard about two sects, their rivalry, and a
 
 ---
 
-### Hours 6–24: Breaking Through to Foundation Establishment
+### Hours 6–24: Breaking Through to Foundation Establishment (Tier 3)
 
 Li Wei cultivates, travels between village/forest/city, fights beasts, sells cores, buys pills. At around hour 20:
 
 ```
-Qi Condensation, Layer 9. Dantian full.
-Breakthrough to Foundation Establishment available.
+Qi Condensation, Layer 9. Your shén bar is full.
+Breakthrough to Foundation Establishment (Tier 3) available.
 
 WARNING: This is a MAJOR breakthrough. You must choose
 your cultivation path. This decision is permanent.
+
+Your shén vessels pulse in your inventory. You've been hoarding
+Qi Crystals and a dark beast core. Now is the time to use them —
+or save them for something else.
 
 As your qi crystallizes into a foundation, visions flood
 your mind — six paths stretch before you...
 ```
 
-**The Path Selection screen opens:**
+**The path selection screen opens:**
 
 ```
 ┌──────────────────────────────────────────────────────┐
-│  CHOOSE YOUR PATH                                     │
+│  CHOOSE YOUR PATH — Tier 3 (Foundation Establishment) │
 │                                                      │
-│  You have reached Foundation Establishment.          │
-│  Your Dao must take form.                             │
+│  You have reached 100 kS shén. Your dantian can       │
+│  expand further, but only if you choose a direction.  │
 │                                                      │
 │  Your affinities suggest these paths:                 │
 │                                                      │

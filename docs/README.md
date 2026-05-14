@@ -157,6 +157,7 @@ Each subsystem has a detailed specification document:
 | [World Factions](./world-factions.md) | **Six first-rate sects (one per path), second/third-rate sects, guilds, pacts, legendary loners** |
 | [Cultivation System](./systems/cultivation.md) | Qi accumulation, breakthrough, tribulation, bottlenecks |
 | [Cultivation Paths](./systems/cultivation-paths.md) | **The Six Paths**: Body, Qi, Spirit, Tech, Faith, Beast — choose at Foundation Establishment |
+| [Path Gameplay](./systems/path-gameplay.md) | **Each path is a different game genre**: Rhythm (Qi), Clicker (Body), Colony (Spirit), Factory (Tech), Civilization (Faith), Monster tamer (Beast) |
 | [Element System](./systems/elements.md) | Five Phases, elemental affinity, qi types, interactions, tribulations |
 | [Martial Arts System](./systems/martial-arts.md) | Styles, stances, internal/external arts, mastery, combos, weapon arts |
 | [Spell System](./systems/spells.md) | Talismans, formations, divine abilities, forbidden arts, summoning |

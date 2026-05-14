@@ -190,11 +190,44 @@ Below the first-rate sects sit organizations that are not weaker — they are **
 
 ### Affiliated Second-Rate Sects
 
-These are smaller, conventional second-rate sects that owe allegiance to a first-rate power.
+These are smaller, conventional second-rate sects that owe allegiance to a first-rate power or operate independently. They are grouped by theme.
+
+#### Blood & Vampiric Sects
+
+These sects revolve around consuming blood — spirit, beast, or mortal — to gain power. They are universally feared and rarely trusted.
 
 | Name | Path | Affiliation | Territory | Leader | Notable For |
 |------|------|------------|-----------|--------|-------------|
-| **Frozen Crane Sect** 寒鹤派 | Qi | Cloud Soaring | Alpine lake | Tier 4 | Specializes in ice-water qi techniques |
+| **Crimson Lotus Vampire Clan** 赤莲血族 | Spirit/Beast hybrid | Shadow Heaven (patron) | Subterranean catacombs beneath Misty Peaks | Tier 5 elder vampire (3,000+ years old) | Drink cultivators' blood to steal their shén and memories. Each generation of vampire is weaker than the last, so the eldest are godlike. They can convert mortals into lesser vampires. Shadow Heaven uses them as spies and assassins — a vampire can live inside a city for decades, unnoticed, waiting. |
+| **Blooddrinker Coven** 饮血盟 | Spirit | Independent (no sect alliance) | Wandering between villages near Black Wind Gorge | Tier 4 | Less refined than the Crimson Lotus. These are cultivators who turned to blood consumption out of desperation — failed qi cultivators who could not absorb ambient energy efficiently. They drink beast blood for survival, mortal blood for strength, and cultivator blood for power. They are hunted by everyone. They survive by never staying in one place. A player who joins them gains rapid shén growth but permanent -50 reputation with ALL sects. |
+| **Ancestor Veneration Society** 祭祖会 | Spirit | Neutral (trade with Temple of Ten Thousand Lights) | Mountain tomb complex | Tier 4 | Do not drink living blood. They preserve and consume the blood of their own ancestors, believing that a family's power accumulates across generations in the bloodline. Every generation adds their blood to a communal reservoir. The current generation drinks from it. They are not hunted because they do not kill — they simply wait for their elders to die naturally, then consume. Disturbing to outsiders, but technically ethical. |
+
+#### Weapon Schools
+
+These sects dedicate themselves to a single weapon, believing that mastery of one tool reveals truths that no generalized cultivation can reach.
+
+| Name | Path | Affiliation | Territory | Leader | Notable For |
+|------|------|------------|-----------|--------|-------------|
+| **Ten-Thousand Sword Court** 万剑庭 | Qi (sword intent) | Cloud Soaring (honorary) | Sword Peak, a mountain shaped like a blade | Tier 5 Sword Saint | They do not cultivate techniques. They cultivate **one technique** — the sword strike — perfected across a lifetime. A Ten-Thousand Sword Court elder knows exactly one attack. That attack can cut through a mountain. They accept only disciples who have never touched a weapon before — they want blank minds, not bad habits. Their disciples spend the first three years learning to DRAW the sword. Nothing else. |
+| **Sundered Bow Order** 断弓门 | Qi (archery) | Independent (neutral) | The Great Ridge, a valley with mile-long sightlines | Tier 4 | Bow cultivators who believe the arrow is the purest expression of intent. Their arrows can curve around obstacles, split into multiple projectiles mid-flight, or pierce through dimensional barriers. They train by shooting targets at progressively impossible distances — the current record is a hit at 47 li (~23 km). They are superb assassins and even better scouts. They take no side in sect politics. They will shoot anyone who threatens their valley. |
+| **Iron Spear Battalion** 铁枪营 | Body (spear) | Iron Mountain (auxiliary) | The Spearhead, a fortress at the border of the Crimson Desert | Tier 4 | Military-style sect. They fight in formation, use coordinated spear techniques that multiply their effectiveness with each additional member. A single Iron Spear disciple is dangerous. A squad of twelve is unstoppable by anything below Tier 5. They rotate between fortress defense and beast-tide suppression. They also serve as the Iron Mountain Sect's primary military arm — body cultivators are strong but undisciplined; the Spear Battalion gives them structure. |
+
+#### Elemental Monasteries
+
+These sects cultivate a single element to its extreme, rejecting balance in favor of absolute mastery.
+
+| Name | Path | Affiliation | Territory | Leader | Notable For |
+|------|------|------------|-----------|--------|-------------|
+| **Everlasting Flame Monastery** 永焰寺 | Qi (fire) | Temple of Ten Thousand Lights (shared site) | Volcano adjoining Caldera | Tier 4 Abbot | A monastery built into an active volcano. Monks meditate on the edge of the lava lake. Their fire techniques are unmatched — but they cannot use water techniques at all. A disciple who joins them gains +50% fire damage permanently and cannot learn any water-element technique ever. They believe fire is the originating element from which all others diverged. They may be correct. |
+| **Abyssal Trench Hermitage** 渊沟庵 | Qi (water) | Independent | Underwater shrine at the deepest point of the Sundered Sea cost | Tier 4 | A monastery at the bottom of the ocean. Water pressure is so immense that only water-aspected cultivators can survive. They cultivate in absolute darkness and crushing depth. Their water techniques can flood a valley, summon tsunamis, or extract moisture from living bodies. They rarely surface. They do not recruit — aspirants must find the hermitage themselves. Most drown trying. |
+| **Storm-Rider Hall** 御风堂 | Qi (wind) | Cloud Soaring (autonomous) | A floating island that drifts between Misty Peaks and Thunder Peak | Tier 4 | Their hall is a mobile island that follows storm patterns. They cultivate in the heart of thunderstorms. A Storm-Rider can fly before they can walk as cultivators — wind techniques are their first lesson. They are the fastest cultivators in the province. Their disciples serve as Cloud Soaring's messengers and scouts. They are also notoriously unserious — they find existence amusing and treat combat as a game. This irritates their more solemn allies. |
+| **Thunder-Forged Pagoda** 雷铸塔 | Qi (thunder) | Independent (respected by all) | The Lightning Field, a plateau where tribulation lightning strikes at random | Tier 4 | The most dangerous elemental monastery. Their training ground is a plateau where heavenly tribulation lightning strikes without warning. Disciples learn to sense, deflect, and ultimately absorb lightning. Those who fail die. Those who succeed emerge with bodies partially composed of lightning essence — they move faster than the eye can track, their strikes carry thunder, and they can survive direct hits from tribulation lightning (which most cultivators die from). They have no allies and no enemies. No one is foolish enough to attack them. |
+
+#### Other Notable Second-Rate Sects
+
+| Name | Path | Affiliation | Territory | Leader | Notable For |
+|------|------|------------|-----------|--------|-------------|
+| **Frozen Crane Sect** 寒鹤派 | Qi (ice) | Cloud Soaring | Alpine lake | Tier 4 | Ice-water qi techniques, beautiful white formations |
 | **Ironblood Monastery** 铁血寺 | Body | Iron Mountain | The Crater's edge | Tier 4 | Extreme gravity training, 20% mortality rate |
 | **Ghost Market Syndicate** 鬼市商会 | Spirit | Shadow Heaven (secret) | Underground | Tier 4 | Information broker, forbidden goods, no questions |
 | **Brassworks Foundry** 铜炉坊 | Tech | Eternal Mechanism | Industrial district | Tier 4 | Mass-produces formation flags, cheap quality |

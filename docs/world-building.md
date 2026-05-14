@@ -469,4 +469,4 @@ These aren't just cosmetic — they change available techniques, NPC reactions, 
 
 ---
 
-*See also: [World System](./systems/world.md), [Encounter System](./systems/encounters.md), [Data Models](../data-models.md)*
+*See also: [World System](./systems/world.md), [Encounter System](./systems/encounters.md), [Data Models](./data-models.md)*

@@ -436,4 +436,4 @@ Individuals so powerful they have no sect. Players can seek them out, be targete
 
 ---
 
-*See also: [Sect & Faction System](./sect-faction.md), [World Building](../world-building.md), [Realms Lore](../realms-lore.md)*
+*See also: [Sect & Faction System](./sect-faction.md), [World Building](./world-building.md), [Realms Lore](./realms-lore.md)*

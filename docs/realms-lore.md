@@ -367,4 +367,4 @@ In society: **Myth.** A Beast Progenitor is not something the world knows how to
 
 ---
 
-*See also: [Energy Tiers](./energy-tiers.md), [Cultivation Paths](./cultivation-paths.md), [World Building](../world-building.md)*
+*See also: [Energy Tiers](./energy-tiers.md), [Cultivation Paths](./cultivation-paths.md), [World Building](./world-building.md)*

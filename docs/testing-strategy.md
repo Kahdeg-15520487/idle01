@@ -577,4 +577,4 @@ jobs:
 
 ---
 
-*See also: [Architecture](../architecture.md), [Project Structure](../project-structure.md)*
+*See also: [Architecture](./architecture.md), [Project Structure](./project-structure.md)*

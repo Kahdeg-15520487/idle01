@@ -794,4 +794,4 @@ Every visible moment leaves invisible fingerprints. The story generator reads th
 
 ---
 
-*See also: [Player Experience — Full Arc](../player-experience.md), [Dialogue System](./systems/dialogue.md), [Encounter System](./systems/encounters.md)*
+*See also: [Player Experience — Full Arc](./player-experience.md), [Dialogue System](./systems/dialogue.md), [Encounter System](./systems/encounters.md)*

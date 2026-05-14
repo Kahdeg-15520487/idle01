@@ -1,6 +1,6 @@
 # MVP Specification — Idle Cultivation Sect
 
-> **Principle**: Ship the story generator loop. Cut everything else. Hand-author what procedural generation would eventually replace. One path, one cultivation style, minimal stats. Prove the core experience in <2 weeks of development.
+> **Principle**: Ship the story generator loop with two paths (Qi and Body). Hand-author everything. Prove the core experience — events → choices → consequences → shén → breakthrough → path choice — in ~3 weeks.
 
 ---
 
@@ -10,60 +10,71 @@
 ┌─────────────────────────────────────────────────────────┐
 │                                                         │
 │   The MVP is a TEXT-DRIVEN STORY GENERATOR              │
-│   where cultivation is the consequence of choices.      │
+│   where cultivation is the consequence of choices,       │
+│   and Foundation Establishment is the final milestone    │
+│   where the player chooses their path.                  │
 │                                                         │
-│   • Events appear                                       │
-│   • Player reads, chooses                               │
-│   • Outcomes play out with consequences                 │
-│   • Cultivation advances as a result                    │
-│   • Events queue up while the player is away             │
+│   • Events appear — situations that demand resolution    │
+│   • Player reads, chooses — options gated by stats/items│
+│   • Outcomes produce items (shén vessels) — absorb or   │
+│     hoard, trade or refine                              │
+│   • Cultivation advances — meditation fills your dantian│
+│     items supplement it                                 │
+│   • Path choice at Foundation (Tier 3) — Qi or Body     │
+│   • Events queue up while the player is away            │
 │                                                         │
 └─────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## The MVP Core Loop (3 minutes to learn)
+## The MVP Core Loop
 
 ```
-      ┌──────────────────────┐
-      │   EVENT APPEARS       │
-      │   (situation + flavor) │
-      └──────────┬───────────┘
+      ┌──────────────────────────────┐
+      │   EVENT APPEARS               │
+      │   (situation + flavor text)    │
+      └──────────┬───────────────────┘
                  │
                  ▼
-      ┌──────────────────────┐
-      │   PLAYER SEES         │
-      │   2–4 CHOICES         │
-      │   (some locked by     │
-      │    stat/item checks)  │
-      └──────────┬───────────┘
+      ┌──────────────────────────────┐
+      │   PLAYER SEES 2–4 CHOICES     │
+      │   • Always available          │
+      │   • 🔒 Stat-gated (grayed)   │
+      │   • 🔓 Race/flag/item-gated  │
+      └──────────┬───────────────────┘
                  │
                  ▼
-      ┌──────────────────────┐
-      │   PLAYER CHOOSES      │
-      └──────────┬───────────┘
+      ┌──────────────────────────────┐
+      │   OUTCOME PLAYS               │
+      │   • Flavor text               │
+      │   • Items gained/lost         │
+      │   • Stats changed             │
+      │   • Flags set                 │
+      │   • New event chained         │
+      │   • Shén vessels added to inv │
+      └──────────┬───────────────────┘
                  │
-                 ▼
-      ┌──────────────────────┐
-      │   OUTCOME PLAYS       │
-      │   • Flavor text       │
-      │   • Qi +/-            │
-      │   • Items +/-         │
-      │   • Stats +/-         │
-      │   • Flags set         │
-      │   • New event chained │
-      └──────────┬───────────┘
-                 │
-                 ▼
-      ┌──────────────────────┐
-      │   NEXT EVENT          │
-      │   (or travel to find  │
-      │    new events)        │
-      └──────────────────────┘
+        ┌────────┴────────┐
+        ▼                 ▼
+  ┌────────────┐   ┌──────────────┐
+  │  MEDITATE   │   │  ABSORB ITEMS │
+  │ (internal  │   │  (from inv)   │
+  │  flow —    │   │  choose what  │
+  │  direct    │   │  to consume)  │
+  │  dantian)  │   └──────┬───────┘
+  └─────┬──────┘          │
+        │                 │
+        └─────┬───────────┘
+              ▼
+      ┌──────────────────────────────┐
+      │   SHÉN BAR FILLS              │
+      │   → Tier breakthrough event   │
+      │   → Path choice at Tier 3     │
+      └──────────────────────────────┘
 ```
 
-**There is no "cultivate" button.** Qi comes from resolving events. Breakthrough is itself an event that fires when Qi crosses a threshold.
+**Meditation is the only internal flow source.** Everything else (beast cores, spirit herbs, found items) produces a shén vessel that must be **absorbed from inventory** — a deliberate choice. You can hoard, sell, or refine for better yield.
 
 ---
 
@@ -71,14 +82,31 @@
 
 ### Player
 - Name input
-- 2 races: Human (balanced), Spirit Fox (+speed, +luck, dark affinity in flavor)
-- 2 origins: Village Orphan (starts in village, +comprehension), Disgraced Disciple (starts in city, already Qi Condensation L1)
-- 5 stats: Attack, Defense, Speed, Comprehension, Luck
-- Qi (current / capacity)
+- 2 races: **Human** (balanced, +5% cultivation speed), **Spirit Fox** (+2 speed, +2 luck, dark affinity)
+- 2 origins: **Village Orphan** (starts in Azure Cloud Village, +3 comprehension, rusty iron sword), **Disgraced Disciple** (starts in Green Jade City, already Qi Condensation L1, +1 technique)
+- 5 stats: **Attack, Defense, Speed, Comprehension, Luck**
 - Karma (-100 to +100, simplified)
 - Spirit stones (currency)
-- Realm + sub-stage (Mortal → Qi Condensation L1–9)
+- Shén bar (current / capacity) — measured in shén (S), kilo shén (kS)
+- Tier (0→3) + sub-stage (Early/Mid/Late/Peak)
+- **Path**: unset until Tier 3 → choose Qi or Body
 - Health (current / max)
+
+### Shén Vessels & Economy
+Items that contain shén. Player decides whether to absorb, hoard, sell, or refine.
+
+| Item | Shén | Found In |
+|------|------|----------|
+| Spirit Stone | 0.01 S | Currency, loot everywhere |
+| Qi Crystal (crude) | 0.5 S | Meditation (Tier 1+) |
+| Beast Core (low) | 0.2 S | Weak beast kills |
+| Spirit Herb | 0.1 S | Exploration |
+| Storage Jade (container) | +5 S capacity | Found, trade |
+
+**Spirit stones double as currency AND shén vessels.** Absorbing one for shén destroys it. Using it as currency keeps it.
+
+### Meditation
+Players can **meditate** (toggle on/off). While meditating, shén flows into the dantian at a fixed rate: Tier 0 → 0.01 S/tick, Tier 1+ → scales. Produces **no item** — internal flow bypasses extraction.
 
 ### Equipment
 - 1 weapon slot
@@ -86,53 +114,51 @@
 - Inventory: 20 item slots (stackable where appropriate)
 
 ### World
-- 5 locations in a line/star graph:
-  - **Azure Cloud Village** (starter, safe, low qi)
+- 5 locations:
+  - **Azure Cloud Village** (starter, safe, low shén density)
   - **Whispering Forest** (low danger, herbs, beasts)
   - **Green Jade City** (hub, merchant, services)
-  - **Misty Peaks** (medium danger, high qi, cultivation bonus)
+  - **Misty Peaks** (medium danger, high qi density, cultivation bonus)
   - **Black Wind Gorge** (high danger, rare loot, dark qi)
-- Travel: select destination → event may fire en route → arrival
+- Travel: select destination → time ticks down → events may fire en route → arrival
 
-### Events (Hand-Authored, ~25 Total)
-- 5 **story chain events** (the Wei Liang / shadow seal arc)
-- 5 **beast encounters** (combat or avoid, 1 per location)
-- 3 **treasure/discovery events** (find items, learn lore)
-- 3 **NPC interaction events** (merchant, elder, rogue)
-- 2 **breakthrough events** (Mortal→Qi, Qi L1→L2+)
-- 2 **travel events** (road encounters, peaceful moments)
-- 3 **idle return events** (catch-up summary, world changes)
-- 2 **milestone events** (first breakthrough, first city visit)
+### Sects (Flavor Only — No Joining)
+- Cloud Soaring Sect (mentioned in events, appears in flavor text)
+- Shadow Heaven Sect (mentioned in events, appears as antagonists)
+- NPCs reference them. The Wei Liang chain involves Cloud Soaring. No join mechanics.
 
 ### Event Choice Gating
-- Stats gate choices: e.g., Comprehension 10+ → examine the cultivator
-- Items gate choices: e.g., have healing herb → heal NPC
-- Karma gates choices: e.g., Karma > 0 → NPC trusts you
-- Race gates choices: e.g., Spirit Fox → sense danger early
-- Past flags gate choices: e.g., met Wei Liang → mention him to Elder
+- **Stats**: Comprehension 10+ → examine the cultivator
+- **Items**: Have healing herb → heal NPC
+- **Karma**: Karma > 0 → NPC trusts you
+- **Race**: Spirit Fox → sense danger early, stealth options
+- **Past flags**: Met Wei Liang → mention him to Elder
 
 ### Combat (Auto-Resolve, Simplified)
 - Attack vs Defense → damage
-- Speed determines who strikes first
-- No elements, no stances, no combos
+- Speed determines turn order
 - Health pools: player vs enemy
-- Victory: loot (stones, cores, items)
+- Victory: loot (spirit stones, beast cores, items)
 - Defeat: lose some stones, return to last safe location
-- Flee: speed check
+- Flee: speed check, chance
 
-### Breakthrough
-- Fires as an event when Qi ≥ capacity
-- Player chooses approach (steady, risky, guided)
-- Success chance based on comprehension + luck + choice
-- Success: realm up, stats up, new locations, new event chains
-- Failure: Qi halved, wait for next breakthrough event
+### Breakthroughs & Path Choice
+Breakthrough fires as an **event** when shén bar reaches tier threshold:
+
+| Tier | Threshold | Event | Milestone |
+|------|-----------|-------|-----------|
+| 0→1 | 10 S | Awaken your dantian. First breakthrough. | Reach Qi Condensation L1 (Qi realm name) |
+| 1→2 | 1 kS | Deepen your foundation. | Reach Qi Condensation L4 |
+| 2→3 | 100 kS | Foundation Establishment — **CHOOSE PATH**. | Pick Qi or Body cultivation |
+
+At Tier 3, the player chooses their path. The game stores this choice. Post-MVP content will branch from here.
 
 ### Idle / Offline
-- While away: time passes
+- While away: time passes, meditation continues (if toggled), events may accumulate
 - On return: summary screen — "While you were away..."
-- Events accumulate in a queue (capped at 5)
-- Qi gains from time passed (based on realm)
-- World state may shift (beast populations, NPC movements)
+- Events queue up (capped at 5)
+- Shén vessels accumulate (from passive sources, if unlocked)
+- World state may shift (NPC movements, location changes)
 
 ### Save / Load
 - Auto-save on every event resolution
@@ -143,90 +169,55 @@
 ### UI
 - Single screen, mobile-first
 - Event card dominates the view
-- Bottom bar: Qi, HP, stones, pending event count
-- Tab bar: Event | Self | World | Log
+- Status bar: Shén, HP, stones, tier, pending event count
+- Tab bar: **Event | Cultivate | Self | World | Log**
+- Cultivate tab shows meditation toggle + shén bar
 - Choice buttons at bottom of event card
 - Locked choices shown grayed with requirement text
 
 ---
 
-## What's OUT — Deferred to Post-MVP
-
-| Deferred | Why |
-|----------|-----|
-| Six cultivation paths | One path (Qi) is enough to prove the loop |
-| Element system (Wu Xing, affinity, qi types) | Flavor-only for MVP |
-| Martial arts styles/stances/combos | Techniques are simple items with +stats |
-| Spell system (talismans, formations, divine abilities) | Items-only for MVP |
-| Sect joining/ranks/missions | NPCs exist but no faction membership |
-| Full dialogue trees with charisma tiers | 2–4 choices per event, no branching dialogue |
-| Procedural generation (weapons, beasts, names) | All hand-authored |
-| LLM free dialogue | Post-MVP stretch |
-| Hidden world state (ecology, rumor mill) | Simplified flags only |
-| Political events (tournaments, beast tides) | Post-MVP |
-| Territory control | Post-MVP |
-| 6 origins, 6 races | 2 each for MVP |
-| 20+ locations | 5 for MVP |
-| Combo system, weapon arts, internal/external arts | Post-MVP |
-| Achievements | Post-MVP |
-| Crafting (pills, talismans) | Post-MVP |
-| Multiple save slots, export/import | Post-MVP |
-
----
-
-## MVP Event Format (Hand-Authored JSON)
+## The MVP Event Format
 
 ```typescript
-// Each event is a static JSON object. No procedural generation.
-
 interface MVPEvent {
   id: string;
-  title: string;                    // "The Dying Cultivator"
-  locationId: string;               // Where it fires (or "any", "travel")
+  title: string;
+  locationId: string;
   category: 'story' | 'encounter' | 'breakthrough' | 'discovery' | 'return';
-  
-  // Narrative
-  description: string;              // Flavor text, NPC dialogue, scene-setting
-  
-  // Choices
+  description: string;
   choices: MVPChoice[];
-  
-  // Triggers — when does this event become available?
   trigger: MVPEventTrigger;
-  
-  // Chaining
-  chainId?: string;                 // Belongs to a story chain
-  chainStage?: number;              // Position in chain
+  chainId?: string;
+  chainStage?: number;
 }
 
 interface MVPChoice {
   id: string;
-  text: string;                     // "Examine the cultivator's wound."
-  tooltip?: string;                 // "Your comprehension lets you assess his condition."
-  
-  // Gates — what's required to pick this?
+  text: string;
+  tooltip?: string;
   requires?: {
     stat?: { name: string; min: number };
-    item?: string;                  // Item ID must be in inventory
+    item?: string;
     karma?: { min?: number; max?: number };
     race?: string;
-    flag?: string;                  // Past event flag must be set
+    flag?: string;
   };
-  
-  // Outcome
   outcome: {
-    flavorText: string;             // What happens narratively
-    qiChange?: number;
+    flavorText: string;
+    // Items instead of direct Qi:
+    itemsGained?: string[];         // Shén vessels, equipment, etc.
+    itemsLost?: string[];           // Items consumed by this choice
     spiritStones?: number;
-    itemsGained?: string[];         // Item IDs
-    itemsLost?: string[];
     statChanges?: Record<string, number>;
     karmaChange?: number;
     healthChange?: number;
     flagsSet?: Record<string, boolean>;
-    nextEventId?: string;           // Chain to another event
-    combat?: MVPMonster;            // If choice leads to combat
-    travelTo?: string;              // If choice involves travel
+    nextEventId?: string;
+    combat?: MVPMonster;
+    travelTo?: string;
+    // Only meditation and breakthrough grant shén directly:
+    shénDirect?: number;            // Rare — only for breakthrough events
   };
 }
 
@@ -244,9 +235,9 @@ interface MVPMonster {
 
 type MVPEventTrigger =
   | { type: 'location'; locationId: string }
-  | { type: 'realm'; minRealm: number }
+  | { type: 'tier'; min: number }
   | { type: 'flag'; flag: string }
-  | { type: 'qiThreshold'; min: number }
+  | { type: 'shénThreshold'; min: number }
   | { type: 'chain'; chainId: string; stage: number }
   | { type: 'return'; minTicksAway: number }
   | { type: 'travel' };
@@ -256,7 +247,7 @@ type MVPEventTrigger =
 
 ## Example MVP Events
 
-### Event 1: The Dying Cultivator (Location: Azure Cloud Village, Realm: Mortal)
+### Event 1: The Dying Cultivator (Starter)
 
 ```json
 {
@@ -267,15 +258,15 @@ type MVPEventTrigger =
   "trigger": { "type": "location", "locationId": "azure_cloud_village" },
   "chainId": "shadow_beneath_peaks",
   "chainStage": 1,
-  "description": "Old Guo, the village gatekeeper, hobbles toward you across the temple courtyard. His face is tight with worry.\n\n\"Li Wei! A wandering cultivator collapsed at the east gate. He's burning with fever, muttering about 'the shadow in the pass.' The headman wants him gone. The healer says he'll die without a spirit herb from the Whispering Forest.\"\n\nOld Guo looks at you expectantly. \"What should we do?\"",
+  "description": "Old Guo, the village gatekeeper, hobbles toward you across the temple courtyard. His face is tight with worry.\n\n\"Li Wei! A wandering cultivator collapsed at the east gate. He's burning with fever, muttering about 'the shadow in the pass.' The headman wants him gone. The healer says he'll die without a Moondew Bloom from the Whispering Forest.\"\n\nOld Guo looks at you expectantly. \"What should we do?\"",
   "choices": [
     {
       "id": "find_herb",
       "text": "\"I'll go to the forest and find the herb.\"",
-      "tooltip": "Travel to Whispering Forest. May involve danger.",
+      "tooltip": "Travel to Whispering Forest. Danger possible.",
       "outcome": {
         "flavorText": "You nod. \"Keep him alive until I return.\"\n\nOld Guo grips your shoulder. \"Be careful, child. The forest has teeth.\"\n\nYou gather your things and head for the east gate.",
-        "qiChange": 5,
+        "itemsGained": ["spirit_herb_moondew"],
         "flagsSet": { "accepted_herb_quest": true },
         "travelTo": "whispering_forest",
         "nextEventId": "herb_hunt"
@@ -287,10 +278,11 @@ type MVPEventTrigger =
       "tooltip": "Requires: Comprehension 10+",
       "requires": { "stat": { "name": "comprehension", "min": 10 } },
       "outcome": {
-        "flavorText": "You kneel beside the stranger. His robes are travel-worn but finely made. A faded emblem on his collar — a white crane against azure sky.\n\nYour knowledge of sect symbols serves you: Cloud Soaring Sect. This man was important.\n\nHis eyes flicker open. \"You... you have the sight. The fox blood. Go to the pass. Before it's too late.\"\n\nHis eyes close. He's alive, but barely.\n\n+8 Qi. New knowledge: Cloud Soaring Sect. New location noted: Cloud Soaring Sect (distant).",
-        "qiChange": 8,
+        "flavorText": "You kneel beside the stranger. His robes are travel-worn but finely made. A faded emblem — a white crane against azure sky.\n\nYour knowledge serves you: Cloud Soaring Sect.\n\nHis eyes flicker open. \"You... you have the sight. The fox blood. Go to the pass. Before it's too late.\"\n\nHis eyes close again. He's alive, but barely.\n\n+1 Comprehension (permanent). New knowledge: Cloud Soaring Sect. The Moondew Bloom will still be needed.",
         "statChanges": { "comprehension": 1 },
+        "itemsGained": ["spirit_herb_moondew"],
         "flagsSet": { "examined_cultivator": true, "knows_cloud_sect": true, "accepted_herb_quest": true },
+        "travelTo": "whispering_forest",
         "nextEventId": "herb_hunt"
       }
     },
@@ -298,8 +290,7 @@ type MVPEventTrigger =
       "id": "refuse",
       "text": "\"Let the headman handle it. Not our problem.\"",
       "outcome": {
-        "flavorText": "Old Guo's face falls. \"I understand. You're just a sweeper. It's not your burden.\"\n\nHe turns and walks away slowly. The cultivator will be expelled by nightfall. Whatever warning he carried will die with him.\n\n+2 Qi. Karma -5. The village loses something it didn't know it had.",
-        "qiChange": 2,
+        "flavorText": "Old Guo's face falls. \"I understand. You're just a sweeper. It's not your burden.\"\n\nHe turns and walks away. The cultivator will be expelled by nightfall. Whatever warning he carried will die with him.\n\nThe village goes back to sleep.",
         "karmaChange": -5,
         "flagsSet": { "refused_cultivator": true }
       }
@@ -308,104 +299,86 @@ type MVPEventTrigger =
 }
 ```
 
-### Event 2: The Herb Hunt (Location: Whispering Forest, Trigger: flag "accepted_herb_quest")
+### Event 2: Breakthrough to Tier 1 (Trigger: Shén ≥ 10 S)
 
 ```json
 {
-  "id": "herb_hunt",
-  "title": "The Herb Hunt",
-  "locationId": "whispering_forest",
-  "category": "story",
-  "trigger": { "type": "flag", "flag": "accepted_herb_quest" },
-  "chainId": "shadow_beneath_peaks",
-  "chainStage": 2,
-  "description": "You've reached the Whispering Forest in search of a Moondew Bloom — the herb that might save the dying cultivator.\n\nAfter an hour of searching, you find it: a pale blue flower growing on a rocky outcrop, glowing faintly in the forest gloom.\n\nBut a Shadow-Touched Wolf guards it, gnawing on deer bones. It hasn't seen you yet. The herb is 30 paces away.",
-  "choices": [
-    {
-      "id": "fight",
-      "text": "\"Fight the wolf. The herb is worth the risk.\"",
-      "outcome": {
-        "flavorText": "You draw your weapon and step into the clearing.\n\nThe wolf's head snaps up. It snarls — a sound that resonates with something deep in your chest.\n\nCombat begins.",
-        "qiChange": 3,
-        "combat": {
-          "name": "Shadow-Touched Wolf",
-          "health": 30,
-          "attack": 5,
-          "defense": 2,
-          "speed": 6,
-          "loot": { "stones": [5, 10], "items": ["beast_core_dark_t1"] }
-        },
-        "flagsSet": { "killed_shadow_wolf": true, "got_moondew": true },
-        "nextEventId": "return_with_herb"
-      }
-    },
-    {
-      "id": "stealth",
-      "text": "\"Wait until dark. Move quietly.\"",
-      "requires": { "race": "spirit_fox" },
-      "tooltip": "Your fox blood makes you naturally stealthy in forests.",
-      "outcome": {
-        "flavorText": "You circle upwind, fox-blood instincts sharpening your senses. A thrown stone distracts the wolf. You dart forward, snatch the Moondew Bloom, and retreat.\n\nNo combat. No injury.\n\nThe wolf never knew you were there.",
-        "qiChange": 10,
-        "flagsSet": { "spared_shadow_wolf": true, "got_moondew": true },
-        "nextEventId": "return_with_herb"
-      }
-    },
-    {
-      "id": "retreat",
-      "text": "\"Forget the herb. Return to the village.\"",
-      "outcome": {
-        "flavorText": "You watch the wolf for a long moment. Then turn back.\n\nThe cultivator will die without the herb. Whatever warning he carried will never reach its destination. The village headman will be relieved — one less problem.\n\nYou tell yourself it was the smart choice.",
-        "qiChange": 1,
-        "karmaChange": -3,
-        "flagsSet": { "abandoned_cultivator": true }
-      }
-    }
-  ]
-}
-```
-
-### Event 3: Breakthrough to Qi Condensation (Trigger: Qi at capacity)
-
-```json
-{
-  "id": "breakthrough_mortal_to_qi",
+  "id": "breakthrough_tier_1",
   "title": "The First Breakthrough",
   "locationId": "any",
   "category": "breakthrough",
-  "trigger": { "type": "qiThreshold", "min": 10 },
-  "description": "The qi you've gathered from your experiences swirls in your dantian. The walls of your spirit press outward — something wants to break free.\n\nYou sit on the temple steps where you've swept a thousand times. Tonight is different. Tonight, you feel the Dao for the first time.\n\nA breakthrough is imminent.",
+  "trigger": { "type": "shénThreshold", "min": 10 },
+  "description": "The shén you've gathered swirls in your dantian. Your experiences — the dying cultivator, the wolf in the forest, every choice you've made — have accumulated into pressure.\n\nThe walls of your dantian creak.\n\nA breakthrough is imminent.",
   "choices": [
     {
       "id": "steady",
-      "text": "\"Meditate calmly. Let the qi settle naturally.\"",
-      "tooltip": "Standard breakthrough. 75% success chance.",
+      "text": "\"Meditate calmly. Let it settle naturally.\"",
+      "tooltip": "Standard breakthrough. 75% chance.",
       "outcome": {
-        "flavorText": "You breathe. The qi stills. And then — like ice cracking in spring — the walls of your dantian expand.\n\nQI CONDENSATION, LAYER 1.\n\nThe world sharpens. Colors are brighter. The mountains seem to breathe.\n\n+5 Attack, +5 Defense, +20 Max HP, +20 Qi capacity.",
+        "flavorText": "You breathe. The shén stills. Then — like ice cracking in spring — the walls of your dantian expand.\n\nTIER 1 REACHED. The world sharpens.\n\n+5 Attack, +5 Defense, +20 Max HP.\nYour shén capacity increases. Qi Condensation. You are now an Initiate.",
         "statChanges": { "attack": 5, "defense": 5 },
-        "flagsSet": { "reached_qi_condensation": true }
+        "shénDirect": 1,
+        "flagsSet": { "reached_tier_1": true }
       }
     },
     {
       "id": "force",
-      "text": "\"Force it. Ride the momentum of everything that's happened.\"",
-      "tooltip": "+15% success chance. But failure is worse.",
+      "text": "\"Force it. I've earned this.\"",
+      "tooltip": "+15% chance. But failure hurts more.",
       "outcome": {
-        "flavorText": "You seize the qi and PUSH.\n\nThe walls shatter — not gently, but gloriously. Golden light erupts from your dantian, visible for a hundred paces. Old Guo looks up from his post, eyes wide.\n\nQI CONDENSATION, LAYER 1.\n\n+7 Attack, +3 Defense, +20 Max HP, +25 Qi capacity.\nBut the backlash lingers: -5 HP from the strain.",
+        "flavorText": "You seize the shén and PUSH.\n\nThe walls shatter not gently but gloriously. A pulse of energy visible for a hundred paces.\n\nTIER 1 REACHED.\n\n+7 Attack, +3 Defense, +20 Max HP.\nBut the strain costs you: -5 HP.",
         "statChanges": { "attack": 7, "defense": 3 },
         "healthChange": -5,
-        "flagsSet": { "reached_qi_condensation": true, "forceful_breakthrough": true }
+        "shénDirect": 1,
+        "flagsSet": { "reached_tier_1": true, "forceful_breakthrough": true }
       }
     },
     {
       "id": "guided",
-      "text": "\"Ask Mother Shen to guide me.\"",
+      "text": "\"Ask the village healer to guide me.\"",
       "requires": { "karma": { "min": 3 } },
-      "tooltip": "The healer's wisdom stabilizes the process.",
+      "tooltip": "Karma 3+. Mother Shen's wisdom steadies the process.",
       "outcome": {
-        "flavorText": "Mother Shen places a weathered hand on your back. \"Breathe, child. The qi is like water — don't fight it. Guide it.\"\n\nHer voice steadies you. The qi flows where she directs. The breakthrough is gentle, almost peaceful.\n\nQI CONDENSATION, LAYER 1.\n\n+5 Attack, +5 Defense, +20 Max HP, +20 Qi capacity.\n+3 Comprehension (Mother Shen's teaching).",
+        "flavorText": "Mother Shen places a weathered hand on your back. \"Breathe, child. The shén is like water — don't fight it. Guide it.\"\n\nHer voice steadies you. The breakthrough is gentle, almost peaceful.\n\nTIER 1 REACHED.\n\n+5 Attack, +5 Defense, +20 Max HP.\n+3 Comprehension from Mother Shen's teaching.",
         "statChanges": { "attack": 5, "defense": 5, "comprehension": 3 },
-        "flagsSet": { "reached_qi_condensation": true, "mother_shen_guided": true }
+        "shénDirect": 1,
+        "flagsSet": { "reached_tier_1": true, "mother_shen_guided": true }
+      }
+    }
+  ]
+}
+```
+
+### Event 3: Path Choice (Trigger: Tier 3 — Foundation Establishment)
+
+```json
+{
+  "id": "choose_path",
+  "title": "The Fork in the Dao",
+  "locationId": "any",
+  "category": "breakthrough",
+  "trigger": { "type": "tier", "min": 3 },
+  "description": "Your shén has reached 100 kS — the threshold of Foundation Establishment. Your dantian can expand further, but only if you choose a direction.\n\nThe Dao is not one road. It is a vast plain with many trails.\n\nTwo paths stretch before you.",
+  "choices": [
+    {
+      "id": "qi_path",
+      "text": "🧘 **Qi Path** — \"I will cultivate the energy of heaven, earth, and stars. The rhythm of the universe flows through my meridians.\"\n\nCycles of meditation, meridian flow, and elemental balance. A rhythm-based cultivation of internal energy.",
+      "outcome": {
+        "flavorText": "You sit at the edge of a cliff and face the setting sun. The shén within you takes on the quality of the wind — flowing, searching, connecting.\n\nYour meridians open. The meridian rhythm game awakens within you.\n\nQI PATH CHOSEN.\n\n+10 max shén capacity. Unlocks: Meridian Meditation, Sun/Moon Essence cycling, elemental affinity growth.",
+        "statChanges": { "comprehension": 3 },
+        "shénDirect": 5,
+        "flagsSet": { "path_chosen": true, "path_qi": true }
+      }
+    },
+    {
+      "id": "body_path",
+      "text": "💪 **Body Path** — \"I will temper my flesh until it transcends mortal limits. My body is my weapon, my temple, my truth.\"\n\nTraining, strain, and endurance — a clicker-based cultivation of the physical form.",
+      "outcome": {
+        "flavorText": "You walk into the wilderness, strip to the waist, and find the heaviest rock you can lift. You lift it until your arms fail. Then you lift it again.\n\nYour muscles tear and rebuild. The training clicker system awakens within you.\n\nBODY PATH CHOSEN.\n\n+10 max HP. Unlocks: Training Exercises, Strain Gauge, Scar System.",
+        "statChanges": { "attack": 5, "defense": 3 },
+        "healthChange": 10,
+        "shénDirect": 5,
+        "flagsSet": { "path_chosen": true, "path_body": true }
       }
     }
   ]
@@ -414,101 +387,29 @@ type MVPEventTrigger =
 
 ---
 
-## Technical Architecture (MVP)
+## What's OUT — Deferred to Post-MVP
 
-```
-idle_cultivation_sect/
-├── index.html                  # Entry point, imports src/main.ts
-├── package.json                # Vite + TypeScript dev deps only
-├── tsconfig.json               # Strict mode, ES2020 target
-├── vite.config.ts              # Path aliases, build config
-│
-└── src/
-    ├── main.ts                 # Bootstrap: create state, start engine, mount UI
-    ├── types.ts                # All MVP interfaces (GameState, Event, Choice, Monster)
-    │
-    ├── engine/
-    │   ├── GameEngine.ts        # Orchestrates tick, processes events
-    │   ├── EventEngine.ts       # Loads events, checks triggers, resolves choices
-    │   ├── CombatEngine.ts      # Auto-resolve combat, damage formula
-    │   └── BreakthroughEngine.ts # Breakthrough chance, resolution
-    │
-    ├── state/
-    │   ├── GameState.ts         # Factory: createInitialState(), state mutators
-    │   └── SaveManager.ts       # localStorage load/save with offline catch-up
-    │
-    ├── data/
-    │   └── events.ts            # 25 hand-authored events as typed objects
-    │
-    └── ui/
-        ├── Renderer.ts          # DOM updates: event card, tabs, status bar
-        ├── EventCard.ts         # Render event description + choices
-        ├── SelfTab.ts           # Stats, inventory, equipment display
-        ├── WorldTab.ts          # Location map, travel controls
-        ├── LogTab.ts            # Event history
-        └── styles.css           # Dark theme, mobile-first
-```
-
-**Dev deps only**: `typescript`, `vite`. Zero runtime dependencies. Four commands:
-
-```bash
-npm install           # Install TypeScript + Vite
-npm run dev           # Dev server with hot reload on localhost:3000
-npm run build         # Bundle to dist/ (single HTML + JS + CSS)
-npm run typecheck     # tsc --noEmit for type validation
-```
-
-### Why TypeScript from the Start
-
-| Concern | Answer |
-|---------|--------|
-| Type safety for events | 25 hand-authored events. A typo in `qiChange` vs `qiCahnge` breaks the game. TypeScript catches this at compile time. |
-| Refactoring to full design | Post-MVP adds 6 paths, elements, sects, etc. Having interfaces from day 1 means splitting into modules is mechanical, not risky. |
-| Developer experience | Autocomplete on `state.player.` — know what fields exist without referencing docs. |
-| Build overhead? | `vite dev` starts in <1 second. Hot reload is instant. No perceptible overhead on modern hardware. |
-| Termux compatibility? | Node.js runs on Termux. Vite works. Development is `npm run dev` then open browser. |
-
----
-
-## MVP UI Mockup
-
-```
-┌──────────────────────────────────────────────────────────┐
-│  ⛩️ Li Wei — Mortal                    [+2 events]        │
-├──────────────────────────────────────────────────────────┤
-│  [ Event ]  [ Self ]  [ World ]  [ Log ]                  │
-├──────────────────────────────────────────────────────────┤
-│                                                          │
-│  ╔══════════════════════════════════════════════════════╗ │
-│  ║  📍 Azure Cloud Village                              ║ │
-│  ║                                                      ║ │
-│  ║  Old Guo hobbles toward you. His face is tight       ║ │
-│  ║  with worry.                                         ║ │
-│  ║                                                      ║ │
-│  ║  "A cultivator collapsed at the east gate. He's      ║ │
-│  ║   burning with fever. The headman wants him gone.    ║ │
-│  ║   The healer says he'll die without a herb from      ║ │
-│  ║   the Whispering Forest."                             ║ │
-│  ║                                                      ║ │
-│  ║  "What should we do?"                                ║ │
-│  ║                                                      ║ │
-│  ╚══════════════════════════════════════════════════════╝ │
-│                                                          │
-│  ┌──────────────────────────────────────────────────┐    │
-│  │  🌿 Go to the forest. Find the herb.              │    │
-│  └──────────────────────────────────────────────────┘    │
-│  ┌──────────────────────────────────────────────────┐    │
-│  │  🔍 Examine him first.                            │    │
-│  │     🔒 Requires: Comprehension 10                  │    │
-│  └──────────────────────────────────────────────────┘    │
-│  ┌──────────────────────────────────────────────────┐    │
-│  │  🏛️ Let the headman handle it. Not our problem.   │    │
-│  └──────────────────────────────────────────────────┘    │
-│                                                          │
-├──────────────────────────────────────────────────────────┤
-│  Qi: 15/20  │  HP: 45/45  │  💎 8  │  Karma: 0          │
-└──────────────────────────────────────────────────────────┘
-```
+| Deferred | Why Out |
+|----------|---------|
+| Six cultivation paths | Only Qi and Body in MVP. Spirit, Tech, Faith, Beast post-MVP. |
+| Full rhythm game (Qi path) | Placeholder: auto-circulate for MVP. The rhythmic mini-game posts. |
+| Full clicker training (Body path) | Placeholder: auto-train for MVP. The full strain gauge posts. |
+| Element system | Flavor-only in MVP. Full wu xing matrix post-MVP. |
+| Martial arts styles/stances/combos | Techniques are simple stat items for MVP. |
+| Spell system | None in MVP. |
+| Sect joining/ranks/missions | Sects exist as flavor only. Full sect system post-MVP. |
+| Full dialogue trees with charisma tiers | 2–4 choices per event, simple stat gates. |
+| Procedural generation | All events hand-authored (25 total). |
+| LLM free dialogue | Post-MVP stretch goal. |
+| Hidden world state | Simplified flags only. No ecology, no rumor mill. |
+| Political events | Post-MVP. |
+| Territory control | Post-MVP. |
+| 6 origins, 6 races | 2 each for MVP. |
+| 20+ locations | 5 for MVP. |
+| Crafting (refinement, alchemy) | Shén vessels are consumable as-is. No crafting. |
+| Beast breeding / colony management / factory builder | These are path-specific post-MVP gameplay systems. |
+| Achievements | Post-MVP. |
+| Multiple save slots | One slot for MVP. |
 
 ---
 
@@ -516,44 +417,86 @@ npm run typecheck     # tsc --noEmit for type validation
 
 ### Phase M1: Skeleton (2–3 days)
 - `npm init`, install `typescript` + `vite`, configure `tsconfig.json`
-- `index.html` entry point, `src/main.ts` bootstrap
-- `src/types.ts` — all MVP interfaces (GameState, MVPEvent, MVPChoice, MVPMonster, etc.)
-- `src/state/GameState.ts` — `createInitialState()` factory function
-- `src/engine/EventEngine.ts` — load events, filter by trigger, present choices
-- `src/ui/Renderer.ts` + `src/ui/EventCard.ts` — DOM rendering
+- `src/types.ts` — all MVP interfaces
+- `src/state/GameState.ts` — factory, shén bar, tier, sub-stage
+- `src/engine/EventEngine.ts` — load events, filter triggers, present choices
+- `src/ui/Renderer.ts` + `src/ui/EventCard.ts`
 - `src/ui/styles.css` — dark theme, tab layout, mobile-first
-- One hardcoded event that always fires
-- **Milestone**: `npm run dev` → browser opens → event appears → click choice → outcome text displays. TypeScript compiles with zero errors.
+- One hardcoded event
+- **Milestone**: Event appears → click choice → outcome text displays. Zero type errors.
 
-### Phase M2: Game Loop (2–3 days)
-- Event resolution applies effects (Qi, items, stats, flags)
-- Next event triggers based on flags/location/triggers
-- 5 events hand-authored (the Wei Liang chain)
-- Combat resolver for beast encounters
-- Breakthrough event fires on Qi threshold
-- **Milestone**: Can play through the Wei Liang chain: dying cultivator → herb hunt → return → breakthrough.
+### Phase M2: Meditation & Shén Economy (2–3 days)
+- Meditation toggle: shén flows into bar while active
+- Shén vessels from events: add to inventory
+- Absorb button: consume vessel → add shén to bar
+- Shén bar display (current / capacity, tier progress percentage)
+- First breakthrough event triggers at 10 S
+- **Milestone**: Meditate → fill bar → breakthrough event → Tier 1.
 
-### Phase M3: World & Travel (1–2 days)
-- 5 locations on world tab with descriptions
-- Travel mechanic: select destination, travel time counts down
-- Travel events (encounters during travel)
-- Location unlocks based on realm/events
-- **Milestone**: Can travel between all 5 locations. Encounters fire en route.
+### Phase M3: World & Travel (2–3 days)
+- World tab with 5 locations
+- Travel: select destination → timer → arrival
+- Travel events fire en route
+- Location-based event triggering
+- **Milestone**: Travel between locations, events fire en route.
 
-### Phase M4: Content & Persistence (2–3 days)
+### Phase M4: Content (3–4 days)
 - All 25 events authored
-- Save/load with localStorage
-- Offline catch-up: calculate elapsed time, generate event queue
-- Return summary screen
-- **Milestone**: Close tab, reopen 2 hours later, see "while you were away" with events queued.
+- The Wei Liang story chain (5 events)
+- Beast encounters (5 events)
+- Treasure/discovery (3 events)
+- NPC interactions (3 events)
+- Breakthrough events (Tier 1, Tier 2, Tier 3)
+- Travel/return events (5 events)
+- Path choice event at Tier 3
+- **Milestone**: Full playthrough: start → events → Tier 3 → choose Qi or Body → end of MVP content.
 
-### Phase M5: Polish (1–2 days)
+### Phase M5: Persistence & Polish (2–3 days)
+- Save/load (localStorage)
+- Offline catch-up with return summary
+- Locked choice display (grayed, requirement shown)
+- Status bar, tab navigation refinement
 - Flavor text pass on all events
-- CSS dark theme, mobile layout
-- Locked choice display (grayed with requirement text)
-- Stat display on Self tab
-- Inventory display (weapon, items)
-- **Milestone**: Feels like a real game. Ship it.
+- **Milestone**: Close tab, reopen, see "while you were away," continue playing.
+
+---
+
+## Technical Architecture
+
+```
+idle_cultivation_sect/
+├── index.html
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+│
+└── src/
+    ├── main.ts                    # Bootstrap
+    ├── types.ts                   # All interfaces
+    │
+    ├── engine/
+    │   ├── GameEngine.ts          # Tick, meditation, shén accumulation
+    │   ├── EventEngine.ts         # Load, filter, present, resolve
+    │   ├── CombatEngine.ts        # Auto-resolve
+    │   └── BreakthroughEngine.ts  # Tier threshold checks
+    │
+    ├── state/
+    │   ├── GameState.ts           # Factory + mutators
+    │   └── SaveManager.ts         # localStorage + offline
+    │
+    ├── data/
+    │   ├── events.ts              # 25 hand-authored events
+    │   ├── locations.ts           # 5 location definitions
+    │   └── items.ts               # Shén vessel definitions
+    │
+    └── ui/
+        ├── Renderer.ts            # Orchestrates all DOM updates
+        ├── EventCard.ts           # Event display + choices
+        ├── MeditateTab.ts         # Meditation toggle + shén bar
+        ├── SelfTab.ts             # Stats, inventory, equipment
+        ├── WorldTab.ts            # Location map + travel
+        └── styles.css
+```
 
 ---
 
@@ -562,31 +505,27 @@ npm run typecheck     # tsc --noEmit for type validation
 | Question | How MVP Answers It |
 |----------|-------------------|
 | Is the story-generator loop compelling? | Playtesters resolve events, want to see what happens next |
-| Do delayed consequences feel magical? | Spared wolf → later event fires. Player says "wait, was that because...?" |
-| Is idle meaningful? | Return after 2h, see event queue, feel like the world continued |
-| Is combat satisfying in auto-resolve? | Flavor text makes fights dramatic even without gameplay |
-| Do stats-as-gate feel good? | "I need 10 Comprehension for that option — better find a way to raise it" |
-| Is the MVP fun for 1 hour? | Playtesters reach Qi Condensation L3, have met NPCs, want to continue |
+| Does the shén economy feel tactile? | Finding a beast core and choosing to absorb or keep it feels real |
+| Is meditation enough as the core idle action? | Toggle it on, do other things, come back to a fuller bar |
+| Do locked choices motivate stat growth? | "Need Comprehension 10 — time to meditate and make smart choices" |
+| Does the path choice feel meaningful? | Two very different paths presented at Tier 3 — player anticipates the gameplay shift |
+| Does offline catch-up feel rewarding? | Return to a queue of events and accumulated shén |
+| Is the MVP fun for 2+ hours? | Playtesters reach Tier 3, choose a path, want to see what comes next |
 
 ---
 
-## Post-MVP — What Comes Next
+## MVP File Count Estimate
 
-After MVP ships and the core loop is validated:
-
-1. **Split into modules** (TypeScript, Vite, proper architecture)
-2. **Add cultivation paths** (6 paths, path choice event at Foundation)
-3. **Add elements** (Wu Xing, affinity, elemental qi)
-4. **Add sects** (join, reputation, missions)
-5. **Add martial arts** (styles, stances, combos)
-6. **Add spells** (talismans, formations)
-7. **Add dialogue system** (charisma tiers, branching trees)
-8. **Add procedural generation** (replace hand-authored with generated)
-9. **Add LLM dialogue** (charisma 100 unlock)
-10. **Add more locations, events, content**
-
-Each post-MVP phase adds a system from the full design docs, validated against the MVP's proven core loop.
+| Category | Files | Lines |
+|----------|-------|-------|
+| Config | 4 | ~50 |
+| Types | 1 | ~150 |
+| Engine | 4 | ~400 |
+| State | 2 | ~200 |
+| Data | 3 | ~600 |
+| UI | 6 | ~500 |
+| **Total** | **20** | **~1,900** |
 
 ---
 
-*See also: [Immediate Gameplay](./immediate-gameplay.md), [Full Player Experience](./player-experience.md), [Master Design Doc](./README.md)*
+*See also: [Immediate Gameplay](./immediate-gameplay.md), [Energy Tiers](./systems/energy-tiers.md), [Path Gameplay](./systems/path-gameplay.md)*

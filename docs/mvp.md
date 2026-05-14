@@ -169,7 +169,7 @@ At Tier 3, the player chooses their path. The game stores this choice. Post-MVP 
 ### UI
 - Single screen, mobile-first
 - Event card dominates the view
-- Status bar: Shén, HP, stones, tier, pending event count
+- Status bar: Shén, HP, stones, tier, meditation indicator
 - Tab bar: **Event | Cultivate | Self | World | Log**
 - Cultivate tab shows meditation toggle + shén bar
 - Choice buttons at bottom of event card
@@ -184,7 +184,7 @@ interface MVPEvent {
   id: string;
   title: string;
   locationId: string;
-  category: 'story' | 'encounter' | 'breakthrough' | 'discovery' | 'return';
+  category: 'story' | 'encounter' | 'breakthrough' | 'discovery';
   description: string;
   choices: MVPChoice[];
   trigger: MVPEventTrigger;
@@ -239,7 +239,6 @@ type MVPEventTrigger =
   | { type: 'flag'; flag: string }
   | { type: 'shénThreshold'; min: number }
   | { type: 'chain'; chainId: string; stage: number }
-  | { type: 'return'; minTicksAway: number }
   | { type: 'travel' };
 ```
 
@@ -447,7 +446,7 @@ type MVPEventTrigger =
 - Treasure/discovery (3 events)
 - NPC interactions (3 events)
 - Breakthrough events (Tier 1, Tier 2, Tier 3)
-- Travel/return events (5 events)
+- Travel events (5 events)
 - Path choice event at Tier 3
 - **Milestone**: Full playthrough: start → events → Tier 3 → choose Qi or Body → end of MVP content.
 

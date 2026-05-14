@@ -62,6 +62,9 @@ export class Renderer {
   }
 
   update(state: GameState): void {
+    // Keep lastState in sync so external state mutations are reflected
+    this.lastState = state;
+    this.initialized = true;
     this.updateHeader(state);
     this.updateStatusBar(state);
 
@@ -419,6 +422,7 @@ export class Renderer {
 
   private lastState!: GameState;
   private onStateUpdate: ((state: GameState) => void) | null = null;
+  private initialized = false;
 
   setStateUpdateCallback(cb: (state: GameState) => void): void {
     this.onStateUpdate = cb;

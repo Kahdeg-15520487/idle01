@@ -4,6 +4,11 @@ import { CombatEngine } from './CombatEngine';
 import { LOCATIONS } from '../data/locations';
 import { ITEMS } from '../data/items';
 
+/** Deep-clone a GameState so mutations don't affect the original. */
+function cloneState(state: GameState): GameState {
+  return JSON.parse(JSON.stringify(state)) as GameState;
+}
+
 export type GameAction =
   | { type: 'START_MEDITATION' }
   | { type: 'STOP_MEDITATION' }
@@ -22,7 +27,8 @@ export class GameEngine {
 
   /** Process a single tick (1 second) */
   tick(state: GameState): GameState {
-    let s = { ...state, tick: state.tick + 1 };
+    let s = cloneState(state);
+    s.tick += 1;
 
     // 1. Meditation: shén accumulates
     if (s.player.meditating && !s.ui.combatState) {
@@ -81,8 +87,8 @@ export class GameEngine {
 
         const outcome = choice.outcome;
 
-        // Build new state from outcome
-        let s = { ...state };
+        // Deep-clone state to avoid mutating the original
+        let s = cloneState(state);
         
         // Apply effects
         if (outcome.spiritStones) {

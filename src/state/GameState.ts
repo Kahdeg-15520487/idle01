@@ -63,30 +63,22 @@ function createPlayer(name: string, race: RaceId, origin: OriginId): PlayerState
 
   // Origin modifiers
   switch (origin) {
-    case 'village_orphan':
+    case 'village_orphan': {
       base.comprehension += 3;
-      base.inventory.push({
+      const rustySword = {
         id: 'rusty_iron_sword',
         name: 'Rusty Iron Sword',
-        type: 'weapon',
-        description: 'A worn sword that has seen better decades.',
-        value: 5,
-        stackable: false,
-        quantity: 1,
-        statBonus: { attack: 2 },
-      });
-      base.equippedWeapon = {
-        id: 'rusty_iron_sword',
-        name: 'Rusty Iron Sword',
-        type: 'weapon',
+        type: 'weapon' as const,
         description: 'A worn sword that has seen better decades.',
         value: 5,
         stackable: false,
         quantity: 1,
         statBonus: { attack: 2 },
       };
+      base.equippedWeapon = rustySword;
       break;
-    case 'disgraced_disciple':
+    }
+    case 'disgraced_disciple': {
       base.tier = 1;
       base.subStage = 'early';
       base.shen = 5;
@@ -95,27 +87,19 @@ function createPlayer(name: string, race: RaceId, origin: OriginId): PlayerState
       base.defense += 2;
       base.spiritStones = 50;
       base.comprehension -= 1;
-      base.inventory.push({
+      const ironSaber = {
         id: 'iron_saber',
         name: 'Iron Saber',
-        type: 'weapon',
-        description: 'A serviceable blade. You took it when you left.',
-        value: 15,
-        stackable: false,
-        quantity: 1,
-        statBonus: { attack: 4 },
-      });
-      base.equippedWeapon = {
-        id: 'iron_saber',
-        name: 'Iron Saber',
-        type: 'weapon',
+        type: 'weapon' as const,
         description: 'A serviceable blade. You took it when you left.',
         value: 15,
         stackable: false,
         quantity: 1,
         statBonus: { attack: 4 },
       };
+      base.equippedWeapon = ironSaber;
       break;
+    }
   }
 
   return base;

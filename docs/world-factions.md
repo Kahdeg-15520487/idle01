@@ -173,25 +173,48 @@ A player who joins Blood Lotus gets: acceptance regardless of race or past, acce
 
 ---
 
-## Second-Rate Sects (~3 per province)
+## Second-Rate Sects — The Alternative Paths
 
-Below the first-rate sects, each major power has affiliated secondary sects that owe allegiance or pay tribute.
+Below the first-rate sects sit organizations that are not weaker — they are **different interpretations** of the same path. Some are breakaways founded by defectors. Some are heresies that the first-rate sect condemns. Some are experiments in a direction the first-rate sect refuses to explore.
 
-| Name | Path | Affiliation | Territory | Leader Tier | Notable For |
-|------|------|------------|-----------|-------------|-------------|
-| **Frozen Crane Sect** 寒鹤派 | Qi | Cloud Soaring | Alpine lake | 4 | Specializes in ice-water qi techniques |
-| **Ironblood Monastery** 铁血寺 | Body | Iron Mountain | The Crater's edge | 4 | Extreme gravity training, 20% mortality rate |
-| **Ghost Market Syndicate** 鬼市商会 | Spirit | Shadow Heaven (secret) | Underground | 4 | Information broker, forbidden goods, no questions |
-| **Brassworks Foundry** 铜炉坊 | Tech | Eternal Mechanism | Industrial district | 4 | Mass-produces formation flags, low quality but cheap |
-| **Lotus of the Dawn** 晨莲派 | Faith | Temple of Ten Thousand Lights | Riverside village | 4 | Healing-focused, runs free clinics |
-| **Crimson Fang Pack** 赤牙帮 | Beast | Blood Lotus | Forest hunting grounds | 4 | Wolf-bloodline cultivators, pack tactics |
+### Six Alternative-Path Sects
 
-Second-rate sects can offer:
-- Their own unique techniques (weaker than first-rate but easier to learn)
-- Sanctuary from first-rate enemies (limited protection)
-- Specialized services (a second-rate tech sect might focus on alchemy while the Pavilion focuses on artifacts)
+| Path | First-Rate (Orthodox) | Second-Rate (Alternative) | Core Difference |
+|------|----------------------|--------------------------|-----------------|
+| **Qi** | Cloud Soaring — store qi in dantian, balance with nature | **Greedy Furnace Society** 贪炉会 — store qi in EVERY organ, not just dantian | Orthodox cultivates slowly, safely. These cultivators pack qi into their liver, lungs, spleen, even bone marrow. Result: explosive bursts of power in short fights. Consequence: organs rupture, lifespan -50%, constant pain. They are battlefield monsters who die young. Cloud Soaring officially denounces them. Shadow Heaven hires them as mercenaries. |
+| **Body** | Iron Mountain — temper the body to endure everything | **Flesh Sculptors** 塑肉匠 — surgically modify and graft flesh for power | Orthodox endures, until the body becomes unbreakable. These cultivators **change** the body — graft beast muscle onto human skeleton, weave metal threads into tendons, implant qi crystals under skin. They look monstrous. They ARE monstrous. Iron Mountain considers them abominations who pervert the sacred unity of the flesh. Blood Lotus trades with them (beast parts for experiments). |
+| **Spirit** | Shadow Heaven — command the dead, dominate spirits | **Verdant Soul Order** 青魂会 — heal the living, guide the dead peacefully | Founded by a defector from Shadow Heaven who saw what the sect did to innocent souls and walked away. This order heals, mends, and helps souls pass on. They are the only spirit cultivators welcomed in cities. Shadow Heaven hunts them as traitors. Cloud Soaring protects them as allies. Their techniques are weaker in combat but stronger in karma. They run free clinics in every slum. |
+| **Tech** | Eternal Mechanism — build machines, study natural laws | **Spark of Ruin** 灭星火 — build only weapons, destroy everything | While the Pavilion builds for every purpose, the Spark of Ruin builds exclusively for destruction. They do not see a problem with this. "A sword is a tool. A bomb is a tool. Morality is a tool. We build tools." The Pavilion officially expelled them 80 years ago for selling a weapon that leveled a city. They now operate underground, selling to Shadow Heaven and anyone else who pays. Their creations are devastating, unstable, and brilliant. |
+| **Faith** | Temple of Ten Thousand Lights — faith through karma, Buddhist themes | **Celestial Chantry** 天唱者 — faith through prayer, Abrahamic themes | The Temple teaches that faith grows through deeds and karma — what you DO shapes your connection to the divine. The Chantry teaches that faith is inherent — you are saved or damned by the content of your belief, not your actions. A mortal who believes purely but has never done a good deed is closer to God than a cultivator who does good deeds but doubts. The two faiths are in cold war. Both claim the other misunderstands divinity. Pilgrims sometimes switch sides and are never heard from again. |
+| **Beast** | Blood Lotus — consume any beast, mix bloodlines freely | **Pureclaw Circle** 纯爪会 — follow one bloodline to its purest extreme | Blood Lotus accepts chaos — consume everything, evolve randomly, see what sticks. Pureclaw rejects this. A follower of Pureclaw chooses ONE bloodline at the start of their path and consumes ONLY from that lineage for life. A Pureclaw wolf cultivator drinks wolf blood, eats wolf hearts, sleeps with wolves. The result is a bloodline purity that Blood Lotus cannot match — but also a narrowness that makes them predictable. Pureclaw cultivators at Tier 4 are stronger than Blood Lotus at Tier 4 — but Blood Lotus has six Tier 5s and Pureclaw has one. They were once part of Blood Lotus. A schism over methodology split them 200 years ago. |
 
-A player who doesn't meet the requirements for a first-rate sect (e.g., not enough reputation, wrong race, low realm) can still join a second-rate sect and work their way up.
+### Affiliated Second-Rate Sects
+
+These are smaller, conventional second-rate sects that owe allegiance to a first-rate power.
+
+| Name | Path | Affiliation | Territory | Leader | Notable For |
+|------|------|------------|-----------|--------|-------------|
+| **Frozen Crane Sect** 寒鹤派 | Qi | Cloud Soaring | Alpine lake | Tier 4 | Specializes in ice-water qi techniques |
+| **Ironblood Monastery** 铁血寺 | Body | Iron Mountain | The Crater's edge | Tier 4 | Extreme gravity training, 20% mortality rate |
+| **Ghost Market Syndicate** 鬼市商会 | Spirit | Shadow Heaven (secret) | Underground | Tier 4 | Information broker, forbidden goods, no questions |
+| **Brassworks Foundry** 铜炉坊 | Tech | Eternal Mechanism | Industrial district | Tier 4 | Mass-produces formation flags, cheap quality |
+| **Lotus of the Dawn** 晨莲派 | Faith | Temple of Ten Thousand Lights | Riverside village | Tier 4 | Healing-focused, runs free clinics |
+| **Crimson Fang Pack** 赤牙帮 | Beast | Blood Lotus | Forest hunting grounds | Tier 4 | Wolf-bloodline cultivators, pack tactics |
+
+### Joining an Alternative-Path Sect
+
+Alternative-path sects have **lower entry requirements** than first-rate sects (less reputation needed, no alignment checks) but come with **social consequences**:
+
+| Sect | Social Penalty | Mechanical Tradeoff |
+|------|---------------|-------------------|
+| Greedy Furnace Society | -30 reputation with Cloud Soaring | +50% burst damage per fight, -40% max HP |
+| Flesh Sculptors | -40 reputation with Iron Mountain | Can graft beast parts for temporary stat boosts, permanent humanity loss |
+| Verdant Soul Order | -60 reputation with Shadow Heaven (treaty) | +50% healing effectiveness, -30% combat damage |
+| Spark of Ruin | -40 reputation with Eternal Mechanism | Crafted weapons deal +50% damage, 20% chance to backfire |
+| Celestial Chantry | -30 reputation with Temple of Ten Thousand Lights | Faith generation +50% through prayer (no deeds needed), karma locked (cannot change after joining) |
+| Pureclaw Circle | -20 reputation with Blood Lotus | Single-bloodline bonus +100%, locked into one beast type permanently |
+
+A player who joins an alternative-path sect is making a statement. Their path is valid — but the world will not let them forget it.
 
 ---
 
